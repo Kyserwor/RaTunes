@@ -49,15 +49,13 @@ public class AlbumDAOController extends HttpServlet {
         response.setContentType("application/json, charset=UTF-8");
         PrintWriter out = response.getWriter();
         String code_array = request.getParameter("albums");
-        System.out.println("il players_code è: " + code_array);
+        System.out.println(code_array);
         String jsonData = code_array;
-        JSONObject jsonObject = null;
+        JSONObject jsonObject;
         try {
-            jsonObject.getJSONArray(code_array);
-            System.out.println();
+            jsonObject = new JSONObject(code_array);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        System.out.println(jsonObject);
     }
 }
