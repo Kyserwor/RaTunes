@@ -55,7 +55,5 @@ public class AlbumDAOController extends HttpServlet {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Album album;
-        String i = jsonObject.get("id");
     }
 }

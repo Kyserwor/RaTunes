@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="9529733c-684d-4d94-9493-8275c7410ac8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/js/albums.js" afterPath="$PROJECT_DIR$/WebContent/js/albums.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java" afterPath="$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java" />
     </list>
     <list id="7d329024-dda0-40c4-a597-563bc95b2aed" name="Failed commit: Default" comment="" />
@@ -92,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.805668">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -1235,13 +1234,7 @@
       <workItem from="1452163562465" duration="14000" />
       <workItem from="1452174867837" duration="19110000" />
       <workItem from="1452351323492" duration="14225000" />
-      <workItem from="1452591940800" duration="11031000" />
-    </task>
-    <task id="LOCAL-00023">
-      <created>1446815643145</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1446815643145</updated>
+      <workItem from="1452591940800" duration="12755000" />
     </task>
     <task id="LOCAL-00024">
       <created>1446825974781</created>
@@ -1531,11 +1524,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452257601268</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="import / export Alben in json format">
+      <created>1452606970007</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1452606970008</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="480373000" />
+    <option name="totallyTimeSpent" value="482097000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1186" extended-state="6" />
@@ -1543,7 +1542,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27039847" sideWeight="0.5698294" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27039847" sideWeight="0.5570362" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29962894" sideWeight="0.22708334" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32931355" sideWeight="0.49791667" order="8" side_tool="false" content_ui="tabs" />
@@ -1559,7 +1558,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27039847" sideWeight="0.43017057" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27039847" sideWeight="0.44296375" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1612,7 +1611,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="RaTunes intellij initial" />
     <MESSAGE value="korrekte anzeige von Songs und ihren eingeschaften" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="import / export Alben in json format" />
+    <option name="LAST_COMMIT_MESSAGE" value="import / export Alben in json format" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2007,7 +2007,7 @@
     <entry file="file://$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.805668">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
           <folding />
         </state>
       </provider>
