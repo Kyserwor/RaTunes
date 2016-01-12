@@ -3,6 +3,7 @@ package de.ratunes.auth;
 import dao.AlbumDAO;
 import mvc.model.Album;
 import mvc.model.User;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -47,13 +48,10 @@ public class AlbumDAOController extends HttpServlet {
 //        AlbumDAO albumDAO = new AlbumDAO();
 //        albumDAO.addAlbum((Album) albums, user);
         response.setContentType("application/json, charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        String code_array = request.getParameter("albums");
-        System.out.println(code_array);
-        String jsonData = code_array;
-        JSONObject jsonObject;
+        JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject = new JSONObject(code_array);
+            jsonObject = new JSONObject(request.getParameter("albums"));
+            System.out.println(jsonObject);
         } catch (JSONException e) {
             e.printStackTrace();
         }

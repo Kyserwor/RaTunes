@@ -134,7 +134,7 @@ var albums= {
         this.globalAlbums[albumId].title = albumTitle;
         this.globalAlbums[albumId].artists = document.getElementsByName("albumArtists");
         this.globalAlbums[albumId].songs = document.getElementsByName("albumSongs");
-        albums.sendAlbumDAOController();
+        albums.sendAlbumDAOController(albumId);
     },
 
     disableEditMode: function(){
@@ -148,12 +148,13 @@ var albums= {
     },
 
 
-    sendAlbumDAOController: function(){
+    sendAlbumDAOController: function(albumId){
+        var jsonAlbum = JSON.stringify(this.globalAlbums[albumId - 1]);
         $.ajax({
             url: "AlbumDAOController",
             dataType: 'json',
             data: {
-                albums: JSON.stringify(this.globalAlbums)
+                albums: jsonAlbum
             },
             type: 'POST',
             error: function () {
