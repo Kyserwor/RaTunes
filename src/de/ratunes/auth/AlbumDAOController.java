@@ -33,29 +33,22 @@ public class AlbumDAOController extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//          response.setContentType("application/json;charset=utf-8");
-//        JSONObject json = new JSONObject();
-//        List<Album> albums = new ArrayList<>();
-//        Object debugger = request.getParameter("albums");
-//        HttpSession session = request.getSession();
-//        User user = (User) session.getAttribute("user");
-//        try {
-//            albums = (List<Album>) json.get("albumsJson");
-//            session.setAttribute("albums", albums);
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//        AlbumDAO albumDAO = new AlbumDAO();
-//        albumDAO.addAlbum((Album) albums, user);
-        response.setContentType("application/json, charset=UTF-8");
+        response.setContentType("application/json;charset=utf-8");
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject = new JSONObject(request.getParameter("albums"));
             System.out.println(jsonObject);
-        } catch (JSONException e) {
+            } catch (JSONException e) {
             e.printStackTrace();
         }
-        Album album;
-        String i = jsonObject.get("id");
+
+        List<Album> albums = new ArrayList<>();
+
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        AlbumDAO albumDAO = new AlbumDAO();
+        albumDAO.addAlbum((Album) albums, user);
+
+
     }
 }
