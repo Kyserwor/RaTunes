@@ -1,0 +1,46 @@
+package dao;
+
+import mvc.model.Album;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+/**
+ * Created by rlukas on 02.11.2015.
+ */
+public class AlbumDAO {
+    public static DatabaseConnection databaseConnection = null;
+
+    public AlbumDAO(){
+        databaseConnection = new DatabaseConnection();
+        databaseConnection.connection();
+    }
+
+    public void addAlbumTitle(Album album){
+        PreparedStatement statement = null;
+        Connection connection = null;
+        try {
+            connection = databaseConnection.connection;
+            String queryString = "INSERT INTO ratunes.album " +
+                    "(title)" +
+                    " VALUES " +
+                    "(?)";
+            statement = connection.prepareStatement(queryString);
+            statement.setString(1, album.getTitle());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        } finally {
+            try{
+                if(connection != null || statement != null){
+                    connection.close();
+                    statement.close();
+                }
+            } catch (SQLException e) {
+                System.out.println(e);
+            }
+        }
+    }
+
+}

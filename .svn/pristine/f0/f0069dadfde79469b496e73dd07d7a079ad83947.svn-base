@@ -1,0 +1,41 @@
+package de.ratunes.auth;
+
+import dao.UserDAO;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.SQLException;
+
+@WebServlet("/RegistrationController")
+public class RegistrationController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	public static String requestParameterUsername= "usernamesignup";
+	public static String requestParameterEmail = "emailsignup";
+	public static String requestParameterPassword = "passwordsignup";
+
+	public RegistrationController() {
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request,response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String username = request.getParameter(requestParameterUsername);
+		String email = request.getParameter(requestParameterEmail);
+		String password = request.getParameter(requestParameterPassword);
+
+		UserDAO userDAO = new UserDAO();
+		try {
+			userDAO.addNewUser(username, email, password);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			getServletConfig().getServletContext().getRequestDispatcher("/view/RaTunesRegistration.jsp#toregister").forward(request,response);
+		}
+		getServletConfig().getServletContext().getRequestDispatcher("/view/RaTunesRegistration.jsp").forward(request,response);
+	}
+
+}

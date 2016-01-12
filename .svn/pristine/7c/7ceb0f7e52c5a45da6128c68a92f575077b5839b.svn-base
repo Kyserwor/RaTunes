@@ -1,0 +1,28 @@
+package mvc.model;
+
+/**
+ * Created by rlukas on 08.09.2015.
+ */
+public class Cover {
+    private int coverID;
+    private String directory;
+
+    //region Getter and Setter
+
+    public int getCoverID() {
+        return coverID;
+    }
+
+    public void setCoverID(int coverID) {
+        this.coverID = coverID;
+    }
+
+    public String getDirectory() {
+        return directory;
+    }
+
+    public void setDirectory(String directory) {
+        this.directory = directory;
+    }
+    //endregion
+}

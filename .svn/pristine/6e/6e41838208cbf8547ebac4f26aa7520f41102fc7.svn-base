@@ -1,0 +1,35 @@
+/**
+ * Created by rlukas on 10.11.2015.
+ */
+function existingAlbumsDB() {
+    $.ajax({
+
+        url: "JsListener",
+        dataType: 'json',
+        error: function () {
+
+            alert("Error Occured");
+        },
+        success: function (data) {
+            albumsToList(data)
+        }
+    });
+}
+
+function albumsToList(albums){
+    clearDiv();
+    $.each(albums.albums, function(key, value){
+        printAlbumTitle(value)
+    })
+}
+
+function clearDiv(){
+    $("#albumList").empty();
+}
+
+function printAlbumTitle(album) {
+    var ul = $("#albumList");
+    var li = $("<h4 id='albumTitleId' "+album.id+"><button class='albumTitle'>"+album.title+"</button></h4>");
+    ul.append(li);
+}
+

@@ -1,0 +1,6 @@
+/**
+ * Created by rlukas on 08.09.2015.
+ */
+public class Title {
+    public String title = "";
+}

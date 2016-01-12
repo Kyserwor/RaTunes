@@ -1,0 +1,63 @@
+<%@page import="mvc.model.Album"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Collection"%>
+<%@page import="java.awt.List"%>
+<%@page import="org.omg.CORBA.SystemException"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<html>
+	<head>
+		<script type="text/javascript" src="ValidateInput.js"></script>
+		<link rel="icon" href="RaTunesIcon.png" type="image/png" />
+		<link rel="stylesheet" href="style.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>RaTunes</title>
+	</head>
+	<body style="font-family:Arial;">
+		<div class="center">
+			<div class="logoContain"><a href="http://localhost:8080/RaTunes/RaTunesView.jsp"</a></div>
+		</div>
+			<form name="inputField" method="post" action="AlbumController" onSubmit="return validateInputflied()">
+				<div class="contain">
+						<div class="floatLeft">
+							<h2 class="center"><i>Add</i></h2>
+						</div>
+						<div class="floatRight">
+							<h2 class="center"><i>Exist</i></h2>
+						</div>
+						
+					<div class="floatLeft">
+						<h3 class="center" id="red">New Albums and Songs</h3>
+						album title:<br>
+						<br>
+						*<input type="text" name="inputAlbumTitle" required="required"><br>
+						<br>
+						artist from album:<br>
+						<br>
+						*<input type="text" name="inputAlbumArtist" required="required"><br>
+						<br>
+						song title:<br>
+						<br>
+						*<input type="text" name="inputSongTitle" required="required"><br>
+						<br>
+						artist from song:<br>
+						<br>
+						*<input type="text" name="inputSongArtist" required="required"><br>
+						<br>
+						<input type="submit" name="saveSubmit" value="save" style="color:darkGreen;">
+					</div>
+					
+					<div class="floatRight">
+						<h3 class="center" id="red">Your Albums and Songs</h3>
+						<c:forEach var="album" items="${albumList}">
+		     				<div class="center ">
+		     					Album: <c:out value="${album.title}" /><br>   		
+		     					-album artist: <c:out value="${album.artists.name}" /><br>
+		    			 		-song title:  <c:out value="${album.songs.title}" /><br>
+		     					-song artist: <c:out value="${album.songs.artists.name}" /><br>
+		     				</div>
+						</c:forEach>	
+					</div>
+				</div>		
+			</form>
+		</body>
+	</html>

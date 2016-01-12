@@ -1,0 +1,28 @@
+.center{
+	text-align: center;
+}
+
+h1#red{
+	color: #D50303;
+}
+h2#red{
+	color: #D50303;
+}
+p#red{
+	color: #D50303;
+}
+div#red{
+	color: #D50303;
+}
+div#albumTitleMessage{
+	color: #58ACFA;
+}
+div#albumArtistMessage{
+	color: #58ACFA;
+}
+div#songTitleMessage{
+	color: #58ACFA;
+}
+div#songArtistMessage{
+	color: #58ACFA;
+}

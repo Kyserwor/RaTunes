@@ -1,0 +1,58 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+/**
+ * Created by rlukas on 28.10.2015.
+ */
+public class UserDAO {
+
+    public static DatabaseConnection databaseConnection = null;
+
+    public static void main(String[] args) {
+        databaseConnection = new DatabaseConnection();
+        databaseConnection.connection();
+    }
+
+
+    public boolean checkLogin(String username, String password) throws SQLException {
+        boolean result = false;
+        ResultSet resultSet = databaseConnection.getDBQuery("SELECT nickname, password FROM user WHERE nickname like "+username+" and password like "+password);
+        if (resultSet != null){
+            result = true;
+        }
+        return result;
+    }
+
+    public void addNewUser(String username, String email, String password) throws SQLException {
+        PreparedStatement statement = null;
+        Connection connection = null;
+        try {
+            connection = (Connection) databaseConnection;
+            String queryString = "INSERT INTO ratunes.user " +
+                                 "(nickname, e-mail, password)" +
+                                 " VALUES " +
+                                 "(?, ?, ?)";
+            statement = connection.prepareStatement(queryString);
+            statement.setString(1, username);
+            statement.setString(2, email);
+            statement.setString(3, password);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+            } finally {
+                try{
+                    if(connection != null || statement != null){
+                        connection.close();
+                        statement.close();
+                    }
+                } catch (SQLException e) {
+                    System.out.println(e);
+                }
+            }
+        //databaseConnection.setDBQuery("INSERT INTO ratunes.user (nickname, e-mail, password) VALUES ("+username+", "+email+", "+password+");");
+    }
+}

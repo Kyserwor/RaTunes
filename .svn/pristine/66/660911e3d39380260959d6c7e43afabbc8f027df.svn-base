@@ -1,0 +1,65 @@
+<%@page import="mvc.model.Album"%>
+<%@page import="mvc.model.User"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Collection"%>
+<%@page import="java.awt.List"%>
+<%@page import="org.omg.CORBA.SystemException"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/css/menu.css">
+<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+<script type="text/javascript" src="/js/sidebar.js"></script>
+	<script src="../js/modernizr.custom.js"></script>
+<script type="text/javascript" src="ValidateInput.js"></script>
+	<script type="text/javascript" src="/js/albums.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.1.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome-4.4.0/css/font-awesome.css">
+<link rel="icon" href="/images/RaTunesIcon.png" type="image/png" />
+<link rel="stylesheet" href="/scss/style.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>RaTunes</title>
+</head>
+<body style="cursor: context-menu">
+<form>
+	<div class="-cx-PRIVATE-Shell__nav">
+		<div class="logoContain" href="/view/RaTunesRegistration.jsp"></div>
+		<br>
+		<h1 class="italic">RaTunes music management</h1>
+	</div>
+	<div class="task">
+		<a href="/view/RaTunesRegistration.jsp"><input type="button" class="logoutButton" value="Logout ${sessionScope.user.name}"></a>
+	</div>
+	<div class="menu">
+		<h2 class="italic">MenuBar</h2>
+		<input type="button" class="albumsButton" onclick="albums.existingAlbumsDB()" value="existing albums">
+		<i class="fa fa-plus addButton"></i>
+		<div id="albums">
+			<div id="albumList">
+			</div>
+		</div>
+	</div>
+	<div class="containContent">
+		<div class="albumCover"></div>
+		<div>
+			<i class="fa fa-pencil-square-o fa-2x editButton" onclick="albums.enableEdit()"></i>
+		</div>
+		<div id="albumInfoContainer"></div>
+
+		<div id="songList">
+			<div class="songPart"><h3 class="songTitle">Song</h3></div>
+			<div class="songPart"></div>
+		</div>
+
+		<div id="footer">
+			<h5 class="italic right">Create by Ramon Lukas</h5>
+		</div>
+	</div>
+</form>
+</body>
+</html>

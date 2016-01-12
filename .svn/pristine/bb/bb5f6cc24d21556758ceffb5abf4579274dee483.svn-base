@@ -1,0 +1,28 @@
+package de.ratunes.validator;
+
+import java.util.List;
+
+public class ParameterValidator implements Validator{
+
+	@Override
+	public boolean validateString(String param) {
+		boolean result = false;
+		if(param != null){
+			result = true;
+		}
+		return result;
+	}
+
+	@Override
+	public boolean validateList(List<String> params) {
+		boolean result = true;
+		for (int index = 0; index < params.size(); index++) {
+			if (params.get(index) == null){
+				result = false;
+				return result;
+			}
+		}
+		return result;
+	}
+
+}

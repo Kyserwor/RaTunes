@@ -1,0 +1,33 @@
+.right {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	/**border:3px solid #73AD21;**/
+	padding: 40px;
+}
+
+body {
+	  background-color: rgba(217, 244, 255, 0.01);
+	  text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.logoContain{
+	width: 180px;
+	height: 180px;
+	border-radius: 150px;
+	border: 3px solid #75B0CF;
+	-webkit-border-radius: 260px;
+	-moz-border-radius: 260px;
+	background: url(/images/RaTunesCover.png) no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 10px;
+	position: static;
+}

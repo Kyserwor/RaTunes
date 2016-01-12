@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - ratunes@localhost" uuid="7ae45ba5-d21d-4742-9f2b-cb8c781aa601">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>ratunes.*</schema-pattern>
+      <default-schemas>ratunes.*</default-schemas>
+    </data-source>
+  </component>
+</project>

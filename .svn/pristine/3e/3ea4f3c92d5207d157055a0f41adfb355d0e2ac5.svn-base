@@ -1,0 +1,16 @@
+package mvc.model;
+
+/**
+ * Created by rlukas on 08.09.2015.
+ */
+public class Artist {
+    public String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+}

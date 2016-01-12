@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Tomcat7WebArtifacts">
+    <output-path>$PROJECT_DIR$/out/artifacts/Tomcat7WebArtifacts</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="RaTunes" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        </element>
+      </element>
+      <element id="dir-copy" path="$PROJECT_DIR$/WebContent" />
+    </root>
+  </artifact>
+</component>

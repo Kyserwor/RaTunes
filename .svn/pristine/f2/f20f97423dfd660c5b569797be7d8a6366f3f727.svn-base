@@ -1,0 +1,44 @@
+package mvc.model;
+import java.util.List;
+
+/**
+ * Created by rlukas on 08.09.2015.
+ */
+public class Song {
+    public String title;
+    public List<Artist> artists;
+    public String songText;
+    public String songWriter;
+
+    public List<Artist> getArtists() {
+        return artists;
+    }
+
+    public void setArtists(List<Artist> artists) {
+        this.artists = artists;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getSongtext() {
+        return songText;
+    }
+
+    public void setSongtext(String songtext) {
+        this.songText = songtext;
+    }
+
+    public String getSongWriter() {
+        return songWriter;
+    }
+
+    public void setSongWriter(String songWriter) {
+        this.songWriter = songWriter;
+    }
+}

@@ -1,0 +1,30 @@
+package dao;
+
+import mvc.model.Song;
+
+import java.sql.SQLException;
+
+/**
+ * Created by rlukas on 02.11.2015.
+ */
+public class SongDAO {
+    public static DatabaseConnection databaseConnection = null;
+
+    public SongDAO(){
+        databaseConnection = new DatabaseConnection();
+        databaseConnection.connection();
+    }
+
+    public int getSongID(Song song) throws SQLException {
+        databaseConnection.getDBQuery("SELECT ID FROM song WHERE title = \""+song.getTitle()+"\" and songwriter = \""+song.getSongWriter()+"\"");
+        return 0;
+    }
+
+    public void addTitle(Song song) throws SQLException {
+        databaseConnection.setDBQuery(song.getTitle());
+    }
+
+    public void getTitle(Song song){
+    }
+
+}

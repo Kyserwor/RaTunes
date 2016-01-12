@@ -1,0 +1,14 @@
+/**
+ * Created by rlukas on 10.11.2015.
+ */
+function consolePrint(){
+    var data = {choice: 'albums'};
+    $.ajax
+    ("JsListener",{
+        type: "GET",
+        data: data,
+        url: "JsListener",
+        success: function(data){(console.log(data))}
+    });
+}
+

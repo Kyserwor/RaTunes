@@ -1,0 +1,13 @@
+package SourcePackage.mvc.controller;
+// Import required java libraries
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+// Extend HttpServlet class
+public class RaTunesController extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String title = request.getParameter("title");
+    }
+}

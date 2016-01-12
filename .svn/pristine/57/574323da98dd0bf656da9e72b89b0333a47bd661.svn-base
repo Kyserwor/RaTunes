@@ -1,0 +1,10 @@
+package mvc.main;
+
+/**
+ * Created by rlukas on 04.09.2015.
+ */
+public class Main {
+    public static void main(String[] args) {
+       // Controller instanzieren
+    }
+}

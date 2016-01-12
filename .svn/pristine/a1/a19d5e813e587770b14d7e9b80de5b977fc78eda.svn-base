@@ -1,0 +1,46 @@
+li {
+	float: left;
+}
+
+a {
+	display: block;
+	width: 60px;
+}
+
+.-cx-PRIVATE-Shell__nav {
+	background-image: linear-gradient( #425b84 100%, transparent 50%);
+	height: 140px;
+	border-bottom-width: 1px;
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	padding: 0 20px;
+	border-bottom: 1px solid;
+	border-bottom-color: #333333;
+}
+
+.right {
+	float: right;
+}
+
+.task{
+	background-color: #546f9d;
+	height: 60px;
+	border-bottom: 1px solid;
+	border-bottom-color: #333333;
+}
+
+.menuContent{
+	background-color: #6783b2;
+	width: auto;
+	height: auto;
+	border-bottom: 1px solid;
+	border-bottom-color: #333333;
+}
+
+.this{
+	border-color: green;
+	width: 388px;
+	border-style: solid;
+}

@@ -1,0 +1,49 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div>
+    <h3 class="center">Your Albums and Songs:</h3>
+
+    <div>
+        <c:forEach var="album" items="${albumList}">
+            <div class="center ">
+                <strong>Album: ${album.title} </strong><br> -album artist:
+                <c:forEach var="artist" items="${album.getArtists}">
+                    <c:out value="${artist.getName}" />
+                </c:forEach>
+                <br> -Track Title:
+                <c:forEach var="song" items="${album.getSongs}">
+                    <c:out value="${song.getTitle}" />
+                    <c:forEach var="songArtist" items="${song.getArtists}">
+                        <c:out value="${songArtist.getName}" />
+                    </c:forEach>
+                </c:forEach>
+                <br>
+            </div>
+        </c:forEach>
+    </div>
+</div>
+--!>

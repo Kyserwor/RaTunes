@@ -1,0 +1,86 @@
+package DAO; /**
+ * Created by rlukas on 07.09.2015.
+ */
+import java.sql.*;
+
+    public class DatabaseConnection {
+
+        private static final String hostName = "localhost";
+        private static final String port = "3306";
+        private static final String dbName = "ratunes";
+        private static final String user = "root";
+        private static final String password = "1234";
+        public Connection connection = null;
+        public Statement connectionStatement = null;
+
+
+        public void connection(){
+            driversLoad();
+            try {
+                connection = createConnection();
+                connectionStatement = createStatement(connection);
+            }
+            catch (SQLException sqlException) {
+                System.out.println("SQLException: " + sqlException.getMessage());
+                System.out.println("SQLState: " + sqlException.getSQLState());
+                System.out.println("VendorError: " + sqlException.getErrorCode());
+                sqlException.printStackTrace();
+            }
+        }
+
+        public void driversLoad(){
+            try {
+                Class.forName("org.gjt.mm.mysql.Driver").newInstance();
+            }
+            catch (Exception e) {
+                System.err.println("Unable to load driver.");
+                e.printStackTrace();
+            }
+        }
+
+        public Connection createConnection(){
+            Connection connection = null;
+            try {
+                System.out.println("Verbindung aufbauen");
+                String url = "jdbc:mysql://"+hostName+":"+port+"/"+dbName;
+                connection = DriverManager.getConnection(url, user, password);
+            } catch (SQLException sqlException) {
+                System.out.println("SQLException: " + sqlException.getMessage());
+                System.out.println("SQLState: " + sqlException.getSQLState());
+                System.out.println("VendorError: " + sqlException.getErrorCode());
+                sqlException.printStackTrace();
+            }
+            return connection;
+        }
+
+        public Statement createStatement(Connection connection) throws SQLException {
+            return connection.createStatement();
+        }
+
+        public void setDBQuery(String sqlCommand) throws SQLException {
+            connectionStatement.executeQuery(sqlCommand);
+        }
+
+        public ResultSet getDBQuery(String sqlCommand) throws SQLException {
+            return connectionStatement.executeQuery(sqlCommand);
+        }
+
+        public void resultFromDB(ResultSet resultSet) throws SQLException {
+            while (resultSet.next()) {
+                String name = resultSet.getString(1);
+                String standort = resultSet.getString("StOrt");
+                double gehalt = resultSet.getDouble(3);
+                System.out.println( name+" "+standort+" "+gehalt );
+            }
+        }
+
+        public void closeConnectionStatement() throws SQLException {
+            connectionStatement.close();
+        }
+
+        public void closeConnection() throws SQLException {
+            connection.close();
+        }
+
+    }
+

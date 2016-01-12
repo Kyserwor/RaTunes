@@ -1,0 +1,43 @@
+package dao;
+
+import mvc.model.Album;
+import mvc.model.Artist;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+/**
+ * Created by rlukas on 02.11.2015.
+ */
+public class AlbumDAO {
+    private static DatabaseConnection databaseConnection = null;
+
+    public AlbumDAO(){
+        databaseConnection = new DatabaseConnection();
+        databaseConnection.connection();
+    }
+
+    public Album getAlbumByID(int albumID){
+
+
+        return null;
+    }
+
+    public void addTitle(Album album){
+        String queryString = "INSERT INTO ratunes.album " +
+                    "(title)" +
+                    " VALUES " +
+                    "(?)";
+       // SingleCallDB(queryString, album.getTitle());
+    }
+
+    public void addAritst(Artist artist){
+        String queryString = "INSERT INTO ratunes.artist " +
+                "(name)" +
+                " VALUES " +
+                "(?)";
+        //SingleCallDB(queryString, artist.getName());
+    }
+}

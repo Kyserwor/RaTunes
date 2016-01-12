@@ -1,0 +1,49 @@
+.right{
+	text-align: right;
+}
+
+body {
+	  background-color: white;
+	  color: black;
+	  text-align: center;
+}
+
+.nav {
+    float: left;
+    width: 200px;
+    border: 3px solid grey;
+}
+
+div#albumTitleMessage{
+	color: red;
+}
+
+div#albumArtistMessage{
+	color: red;
+}
+
+div#songTitleMessage{
+	color: red;
+}
+
+div#songArtistMessage{
+	color: red;
+}
+
+.logoContain{
+	width: 200px;
+	height: 200px;
+	border-radius: 150px;
+	-webkit-border-radius: 180px;
+	-moz-border-radius: 180px;
+	background: url(RaTunesCover.png) no-repeat;	
+	background-size: 100% 100%;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.albumAndSongOutput{
+	color: green;
+	font-weight: bolder;
+	
+}

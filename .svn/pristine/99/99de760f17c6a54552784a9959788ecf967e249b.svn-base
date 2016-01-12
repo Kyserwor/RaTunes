@@ -1,0 +1,51 @@
+package de.ratunes.auth;
+
+import dao.AlbumDAO;
+import jdk.nashorn.internal.ir.debug.JSONWriter;
+import jdk.nashorn.internal.runtime.JSONFunctions;
+import mvc.model.Album;
+import mvc.model.User;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by rlukas on 10.11.2015.
+ */
+@WebServlet("/JsListener")
+public class JsListener extends HttpServlet{
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doPost(request, response);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        List<Album> albums = new ArrayList<>();
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("user");
+        AlbumDAO albumDAO = new AlbumDAO();
+        albums = albumDAO.getAlbumsByUser(user);
+        response.setContentType("application/json;charset=utf-8");
+        JSONObject json = new JSONObject();
+
+        try {
+            json.put("albums", albums);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        PrintWriter pw = response.getWriter();
+        pw.print(json.toString());
+        pw.close();
+    }
+}

@@ -1,0 +1,49 @@
+.right {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	/**border:3px solid #73AD21;**/
+	padding: 40px;
+}
+
+body {
+	  background-color: rgba(217, 244, 255, 0.01);
+	  text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.logoContain{
+	width: 120px;
+	height: 120px;
+	border-radius: 150px;
+	border: 1px solid #8e8e8f;
+	-webkit-border-radius: 260px;
+	-moz-border-radius: 260px;
+	background: url(/images/RaTunesCover.png) no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	margin-left: auto;
+	float: left;
+	padding: 10px;
+}
+
+.menu{
+	background-color: #425b84;
+	float: left;
+	width: 400px;
+	height: 900px;
+	border-right: 1px solid;
+	border-right-color: #333333;
+}
+
+.albumsButton{
+	color: #070101;
+	border-radius: 12px;
+	border: 1px solid #787878;
+	background-color: #f0f0f1;
+
+}

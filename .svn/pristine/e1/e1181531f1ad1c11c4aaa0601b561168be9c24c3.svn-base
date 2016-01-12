@@ -1,0 +1,60 @@
+package de.ratunes.album;
+
+import java.io.IOException; 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import de.ratunes.validator.ParameterValidator;
+import mvc.model.Album;
+import mvc.model.Artist;
+import mvc.model.Song;
+@WebServlet("/AlbumController")
+public class AlbumController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private static AlbumRepository albumRepository = new AlbumMemoryRepository();
+	public static String requestParameterAlbumTitle = "inputAlbumTitle";
+	public static String requestParameterAlbumArtist = "inputAlbumArtist";
+	public static String requestParameterSongTitle = "inputSongTitle";
+
+    public AlbumController() {
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String albumTitle = request.getParameter(requestParameterAlbumTitle);
+		String albumArtist = request.getParameter(requestParameterAlbumArtist);
+		String songTitle = request.getParameter(requestParameterSongTitle);
+		
+		List<String> requestParams = new ArrayList<String>(); 
+		requestParams.add(albumTitle);
+		requestParams.add(albumArtist);
+		requestParams.add(songTitle);
+		
+		ParameterValidator parameterValidator = new ParameterValidator();
+		parameterValidator.validateList(requestParams);
+	
+		Album album = new Album();
+		Song song = new Song();
+		Artist artistFromAlbum = new Artist();
+		
+		artistFromAlbum.setName(albumArtist);
+		song.setTitle(songTitle);
+		album.setTitle(albumTitle);
+		album.addSong(song);
+		album.addArtist(artistFromAlbum);
+
+		albumRepository.create(album);
+		request.setAttribute("albumList", albumRepository.list());
+		getServletConfig().getServletContext().getRequestDispatcher("/view/RaTunesCreateAlbum.jsp").forward(request,response);
+	}
+
+}

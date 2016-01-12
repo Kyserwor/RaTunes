@@ -1,0 +1,54 @@
+package dao;
+
+import mvc.model.Artist;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+/**
+ * Created by rlukas on 03.11.2015.
+ */
+public class ArtistDAO {
+    public static DatabaseConnection databaseConnection = null;
+
+    public ArtistDAO(){
+        databaseConnection = new DatabaseConnection();
+        databaseConnection.connection();
+    }
+
+    public void addArtist(Artist artist){
+        PreparedStatement statement = null;
+        Connection connection = null;
+        try {
+            connection = databaseConnection.connection;
+            String queryString = "INSERT INTO ratunes.artist" +
+                    "(name) " +
+                    " VALUES " +
+                    "(?)";
+            statement = connection.prepareStatement(queryString);
+            statement.setString(1, artist.getName());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        } finally {
+            closeDatabase();
+        }
+    }
+
+    public void addArtists(List<Artist> artists) {
+        for (Artist artist : artists) {
+            addArtist(artist);
+        }
+    }
+
+    public void closeDatabase(){
+        try {
+            databaseConnection.closeConnection();
+            databaseConnection.closeStatement();
+        } catch (SQLException e){
+            System.out.println(e);
+        }
+    }
+}

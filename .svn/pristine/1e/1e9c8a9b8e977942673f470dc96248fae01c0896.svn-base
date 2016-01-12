@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>RaTunes</title>
+    <h1 align="center">RaTunes</h1>
+    <div>
+        <p align="center">
+            Title: <input type="text" name="title">
+            <button name="save">save</button>
+        </p>
+    </div>
+</head>
+<body>
+
+</body>
+</html>

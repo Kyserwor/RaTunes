@@ -1,0 +1,95 @@
+package dao;
+
+import mvc.model.Song;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+/**
+ * Created by rlukas on 02.11.2015.
+ */
+public class SongDAO {
+    public static DatabaseConnection databaseConnection = null;
+
+    public SongDAO(){
+        databaseConnection = new DatabaseConnection();
+        databaseConnection.connection();
+    }
+
+    public void addSong(Song song){
+        PreparedStatement statement = null;
+        Connection connection = null;
+        try {
+            connection = databaseConnection.connection;
+            String queryString = "INSERT INTO ratunes.song" +
+                    "(title, songtext, songwriter, albumID) " +
+                    " VALUES " +
+                    "(?, ?, ?, ?)";
+            statement = connection.prepareStatement(queryString);
+            statement.setString(1, song.getTitle());
+            statement.setString(2, song.getSongText());
+            statement.setString(3, song.getSongWriter());
+            statement.setInt(4, song.getAlbumID());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        } finally {
+            try {
+                databaseConnection.closeConnection();
+                databaseConnection.closeStatement();
+            } catch (SQLException e){
+                System.out.println(e);
+            }
+        }
+    }
+
+    public void addSongs(List<Song> songs){
+        for (Song song: songs){
+            addSong(song);
+        }
+    }
+
+    public void updateSong(Song song){
+        PreparedStatement statement = null;
+        Connection connection = null;
+        try {
+            connection = databaseConnection.connection;
+            String queryString = "UPDATE ratunes.song" +
+                    "SET title=?, songtext=?, songwriter=?, albumID=?" +
+                    " WHERE id=?";
+            statement = connection.prepareStatement(queryString);
+            statement.setString(1, song.getTitle());
+            statement.setString(2, song.getSongText());
+            statement.setString(3, song.getSongWriter());
+            statement.setInt(4, song.getAlbumID());
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e);
+        } finally {
+            closeDatabase();
+        }
+    }
+
+    public int getSongID(Song song) throws SQLException {
+        databaseConnection.getDBQuery("SELECT ID FROM song WHERE title = \""+song.getTitle()+"\" and songwriter = \""+song.getSongWriter()+"\"");
+        return 0;
+    }
+
+    public void addTitle(Song song) throws SQLException {
+        databaseConnection.setDBQuery(song.getTitle());
+    }
+
+    public void getTitle(Song song){
+    }
+
+    public void closeDatabase(){
+        try {
+            databaseConnection.closeConnection();
+            databaseConnection.closeStatement();
+        } catch (SQLException e){
+            System.out.println(e);
+        }
+    }
+}

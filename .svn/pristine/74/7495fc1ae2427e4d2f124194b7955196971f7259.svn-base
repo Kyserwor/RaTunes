@@ -1,0 +1,49 @@
+<%@page import="mvc.model.Album"%>
+<%@page import="mvc.model.User"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Collection"%>
+<%@page import="java.awt.List"%>
+<%@page import="org.omg.CORBA.SystemException"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/css/menu.css">
+<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+<script type="text/javascript" src="/js/sidebar.js"></script>
+	<script src="../js/modernizr.custom.js"></script>
+<script type="text/javascript" src="ValidateInput.js"></script>
+<link rel="icon" href="/images/RaTunesIcon.png" type="image/png" />
+<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/account.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>RaTunes create Album</title>
+</head>
+<body style="font-family: Arial;">
+	<nav class="-cx-PRIVATE-Shell__nav">
+		<div class="right">
+			<section class="content">
+				<div class="bg-1">
+					<button class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s" data-text="Logout"><span>Online: ${sessionScope.user.name}</span></button>
+				</div>
+				<div class="this"></div>
+			</section>
+		</div>
+	</nav>
+	<form action="/view/RaTunesRegistration.jsp">
+		<div class="right">
+			<div class="center">
+				<a class="logoContain" href="/view/RaTunesRegistration.jsp"></a>
+			</div>
+
+			<div class="menu">
+				<button class="menu">whatever</button>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

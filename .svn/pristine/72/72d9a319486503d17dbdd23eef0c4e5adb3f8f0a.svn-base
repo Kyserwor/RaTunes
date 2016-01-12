@@ -1,0 +1,7 @@
+function validateInputflied() { 
+	if(document.inputField.passwordsignup.value != document.inputField.passwordsignup_confirm.value) {
+		document.getElementById("passwordMessage").innerHTML = "password does not match!";
+		return false;
+	}
+	return true;
+}

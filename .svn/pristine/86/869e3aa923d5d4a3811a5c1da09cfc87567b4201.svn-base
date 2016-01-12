@@ -1,0 +1,35 @@
+package de.ratunes.auth;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+
+/**
+ * Created by rlukas on 10.11.2015.
+ */
+public class jsListener {
+
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        doPost(request, response);
+    }
+
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response) throws ServletException, IOException {
+
+        try {
+            HttpSession session = request.getSession();
+
+            /// Your Code
+            //out.println("sucess / failer")
+        } catch (Exception ex) {
+            // System.err.println("Initial SessionFactory creation failed.");
+            ex.printStackTrace();
+            System.exit(0);
+        }
+    }
+}

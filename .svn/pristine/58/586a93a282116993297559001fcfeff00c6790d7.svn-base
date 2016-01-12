@@ -1,0 +1,26 @@
+.right{
+	text-align: right;
+}
+
+body {
+	  background-color: #91DAFF;
+	  text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.logoContain{
+	width: 200px;
+	height: 200px;
+	border-radius: 150px;
+	border: 6px solid #75B0CF;
+	-webkit-border-radius: 180px;
+	-moz-border-radius: 180px;
+	background: url(/images/RaTunesCover.png) no-repeat;
+	background-size: 100% 100%;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}

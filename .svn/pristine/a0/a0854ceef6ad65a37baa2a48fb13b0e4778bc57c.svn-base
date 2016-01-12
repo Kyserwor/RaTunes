@@ -1,0 +1,9 @@
+package de.ratunes.validator;
+
+import java.util.List;
+
+public interface Validator {
+	boolean validateString(String param);
+
+	boolean validateList(List<String> params);
+}

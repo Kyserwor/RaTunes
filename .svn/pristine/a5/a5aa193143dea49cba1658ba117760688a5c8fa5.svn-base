@@ -1,0 +1,58 @@
+<%@page import="mvc.model.Album"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Collection"%>
+<%@page import="java.awt.List"%>
+<%@page import="org.omg.CORBA.SystemException"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<html>
+	<head>
+		<script type="text/javascript" src="ValidateInput.js"></script>
+		<link rel="icon" href="RaTunesIcon.png" type="image/png" />
+		<link rel="stylesheet" href="style.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+		<title>RaTunes</title>
+	</head>
+	<body style="font-family:Arial;">
+		<div class="logoContain"></div>
+	
+		<form name="inputField" method="post" action="AlbumController" onSubmit="return validateInputflied()">
+			<h1 class="center" id="red">RaTunes</h1>
+			<div class="center">
+				<div class="nav">
+					album title:<br>
+					<br>
+					*<input type="text" name="inputAlbumTitle"><br>
+					<div id="albumTitleMessage"></div>
+					<br>
+					artist from album:<br>
+					<br>
+					*<input type="text" name="inputAlbumArtist"><br>
+					<div id="albumArtistMessage"></div>
+					<br>
+					song title:<br>
+					<br>
+					*<input type="text" name="inputSongTitle"><br>
+					<div id="songTitleMessage"></div>
+					<br>
+					artist from song:<br>
+					<br>
+					*<input type="text" name="inputSongArtist"><br>
+					<div id="songArtistMessage"></div>
+					<br>
+					<input type="submit" name="saveSubmit" value="save" style="color:darkGreen;">
+				</div>
+				<div class="nav">
+					<h2 class="center" id="red">Your Albums and Songs</h2>
+					<c:forEach var="album" items="${albumList}">
+     				<div class="center ">
+     					album title: <p class="albumAndSongOutput"><c:out value="${album.title}" /></p>    		
+     					album artist: <p class="albumAndSongOutput"><c:out value="${album.artists.name}" /></p>
+    			 		song title: <p class="albumAndSongOutput"><c:out value="${album.songs.title}" /></p>
+     					song artist: <p class="albumAndSongOutput"><c:out value="${album.songs.artists.name}" /></p>
+     				</div>
+					</c:forEach>	
+				</div>
+			</div>		
+		</form>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+li {
+	float: left;
+}
+
+a {
+	display: block;
+	width: 60px;
+}
+#menu button {
+	width: 80%;
+	-webkit-border-radius: 260px;
+	-moz-border-radius: 260px;
+}
+
+.-cx-PRIVATE-Shell__nav {
+	background-image: linear-gradient( #c4d4da 50%, transparent 50%);
+	border-bottom-width: 1px;
+	-webkit-box-ordinal-group: 2;
+	-webkit-order: 1;
+	-ms-flex-order: 1;
+	order: 1;
+	padding: 0 20px;
+}
+
+.right {
+	float: right;
+}
+
+.this{
+	border-color: green;
+	border-width: 4px;
+	border-style: solid;
+}

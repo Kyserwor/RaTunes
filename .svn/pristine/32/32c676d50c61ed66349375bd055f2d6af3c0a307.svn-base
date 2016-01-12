@@ -1,0 +1,69 @@
+package dao;
+
+import mvc.model.Album;
+import mvc.model.Artist;
+
+import java.sql.*;
+
+/**
+ * Created by rlukas on 02.11.2015.
+ */
+public class AlbumDAO {
+    private static DatabaseConnection databaseConnection = null;
+
+    public AlbumDAO(){
+        databaseConnection = new DatabaseConnection();
+        databaseConnection.connection();
+    }
+
+    public void addAlbum(){
+
+    }
+
+    public Album getAlbumByID(int albumID){
+        Album album = new Album(albumID,
+                                getTitleByAlbumID(albumID),
+                                new GenreDAO().getGenresByAlbumID(albumID),
+                                new ArtistDAO().getArtistsByAlbumID(albumID),
+                                new SongDAO().getSongsByAlbumId(albumID),
+                                new CoverDAO().getCoverbyID(albumID));
+        return album;
+    }
+
+    public String getTitleByAlbumID(int albumID){
+        String title = null;
+        try {
+            String query = "SELECT " +
+                           "ratunes.album.title " +
+                           "FROM ratunes.album " +
+                           "WHERE ratunes.album.id = ?";
+            PreparedStatement statement = databaseConnection.getStatement(query);
+            statement.setInt(1, albumID);
+            ResultSet resultSet = statement.executeQuery();
+            if (resultSet.next()) {
+                title = resultSet.getString("title");
+            }
+        } catch (SQLException e) {
+            System.out.println(e);
+        } finally {
+            databaseConnection.closeDatabase();
+        }
+        return title;
+    }
+
+    public void addTitle(Album album){
+        String queryString = "INSERT INTO ratunes.album " +
+                    "(title)" +
+                    " VALUES " +
+                    "(?)";
+       // SingleCallDB(queryString, album.getTitle());
+    }
+
+    public void addAritst(Artist artist){
+        String queryString = "INSERT INTO ratunes.artist " +
+                "(name)" +
+                " VALUES " +
+                "(?)";
+        //SingleCallDB(queryString, artist.getName());
+    }
+}

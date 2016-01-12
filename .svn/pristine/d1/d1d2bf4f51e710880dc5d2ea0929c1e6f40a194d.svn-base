@@ -1,0 +1,49 @@
+/**
+ * Created by rlukas on 10.11.2015.
+ */
+var globalAlbums;
+
+function existingAlbumsDB() {
+    $.ajax({
+
+        url: "JsListener",
+        dataType: 'json',
+        error: function () {
+
+            alert("Error Occured");
+        },
+        success: function (data) {
+            albumsToList(data)
+        }
+    });
+}
+
+function albumsToList(albums){
+    clearIdDiv();
+    $.each(albums.albums, function(key, value){
+        printAlbumTitle(value, key)
+    })
+    globalAlbums = albums.albums;
+}
+
+function clearIdDiv(){
+    $("#albumList").empty();
+}
+
+function printAlbumTitle(album, key) {
+    var ul = $("#albumList");
+    var li = $("<input id='albumTitleId' type='button' "+album.id+" class='albumTitle albumButton' onclick='showAlbum("+key+")' value='"+album.title+"'><br>");
+    ul.append(li);
+}
+
+function showAlbum(index){
+    clearClassDiv();
+    var cover = $(".albumCover");
+    var coverTitle = $("<h4 class='albumCoverTitle'>"+globalAlbums[index].title+"</h4>");
+    cover.append(coverTitle);
+}
+
+function clearClassDiv(){
+    $(".albumCover").empty();
+}
+

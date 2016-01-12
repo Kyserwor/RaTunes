@@ -1,0 +1,47 @@
+package mvc.model;
+
+/**
+ * Created by rlukas on 08.09.2015.
+ */
+public class Song {
+    public String title;
+    public String songText;
+    public String songWriter;
+    public int albumID;
+
+
+
+    //region Getter and Setter
+    public String getTitle() {
+    return title;
+}
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getSongWriter() {
+        return songWriter;
+    }
+
+    public void setSongWriter(String songWriter) {
+        this.songWriter = songWriter;
+    }
+
+    public String getSongText() {
+        return songText;
+    }
+
+    public void setSongText(String songText) {
+        this.songText = songText;
+    }
+
+    public int getAlbumID() {
+        return albumID;
+    }
+
+    public void setAlbumID(int albumID) {
+        this.albumID = albumID;
+    }
+    //endregion
+}

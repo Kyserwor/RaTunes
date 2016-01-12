@@ -1,0 +1,16 @@
+/**
+ * Created by rlukas on 10.11.2015.
+ */
+function consolePrint(){
+    $.ajax
+    ("/src/de/ratunes/auth/jsListener.java",{
+        type: "GET",
+        data: 'User',
+        //url: url,
+        success:function(content)
+        {
+            alert(content);
+        }
+    });
+}
+

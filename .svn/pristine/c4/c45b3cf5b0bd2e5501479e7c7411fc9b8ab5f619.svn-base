@@ -1,0 +1,78 @@
+<%@page import="mvc.model.Album"%>
+<%@page import="mvc.model.User"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.Collection"%>
+<%@page import="java.awt.List"%>
+<%@page import="org.omg.CORBA.SystemException"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+<link rel="stylesheet" type="text/css" href="../css/demo.css" />
+<link rel="stylesheet" type="text/css" href="../css/component.css" />
+<script src="../js/modernizr.custom.js"></script>
+<script type="text/javascript" src="ValidateInput.js"></script>
+<link rel="icon" href="/images/RaTunesIcon.png" type="image/png" />
+<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="/css/account.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>RaTunes create Album</title>
+</head>
+<body style="font-family: Arial;">
+<form action="/view/RaTunesRegistration.jsp">
+	<div class="right">
+		<div class="center">
+			<a class="logoContain" href="/view/RaTunesRegistration.jsp"></a>
+		</div>
+		<section class="content">
+		<div class="bg-1">
+			<button class="button button--rayen button--border-thin button--text-thick button--text-upper button--size-s" data-text="Logout"><span>Online: ${sessionScope.user.name}</span></button>
+		</div>
+	</section>
+</form>
+	</div>
+
+	<div class="container">
+		<div class="codrops-top clearfix">
+			<a class="codrops-icon codrops-icon-prev"
+			   href="http://localhost:8081/view/RaTunesExistsAlbum.jsp"><span>Exists Album</span></a>
+		</div>
+		<section>
+			<form id="theForm" class="simform" autocomplete="off" name="inputField" method="post" action="AlbumController" onSubmit="return validateInputflied()">
+				<div class="simform-inner">
+					<ol class="questions">
+						<li><span><label for="inputAlbumTitle">Album
+									title: </label></span> <input id="inputAlbumTitle" name="inputAlbumTitle"
+							type="text" /></li>
+						<li><span><label for="inputAlbumArtist">Artist
+									from Album: </label></span> <input id="inputAlbumArtist"
+							name="inputAlbumArtist" type="text" /></li>
+						<li><span><label for="inputSongTitle">Song
+									title: </label></span> <input id="inputSongTitle" name="inputSongTitle"
+							type="text" /></li>
+					</ol>
+					<!-- /questions -->
+					<button class="submit" type="submit">Send answers</button>
+					<div class="controls">
+						<button class="next"></button>
+						<div class="progress"></div>
+						<span class="number"> <span class="number-current"></span>
+							<span class="number-total"></span>
+						</span> <span class="error-message"></span>
+					</div>
+					<!-- / controls -->
+				</div>
+				<!-- /simform-inner -->
+				<span class="final-message"></span>
+			</form>
+		</section>
+	</div>
+	<script src="../js/classie.js"></script>
+	<script src="../js/stepsForm.js"></script>
+	<script src="../js/app.js"></script>
+</body>
+</html>
