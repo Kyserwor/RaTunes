@@ -7,6 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" readonly="true" id="9529733c-684d-4d94-9493-8275c7410ac8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/js/albums.js" afterPath="$PROJECT_DIR$/WebContent/js/albums.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/scss/style.css" afterPath="$PROJECT_DIR$/WebContent/scss/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/view/RaTunesCreateAlbum.jsp" afterPath="$PROJECT_DIR$/WebContent/view/RaTunesCreateAlbum.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java" afterPath="$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java" />
     </list>
     <list id="7d329024-dda0-40c4-a597-563bc95b2aed" name="Failed commit: Default" comment="" />
@@ -51,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/WebContent/js/albums.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="151" column="68" selection-start-line="151" selection-start-column="68" selection-end-line="151" selection-end-column="68" />
+              <caret line="156" column="16" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -62,7 +65,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,7 +77,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,16 +89,20 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#608#609#0" expanded="false" />
+                <element signature="e#642#643#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlbumDAOController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AlbumDAOController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.805668">
-              <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,9 +111,39 @@
       <file leaf-file-name="Album.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/mvc/model/Album.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35762483">
+            <state vertical-scroll-proportion="0.0">
               <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#915#916#0" expanded="false" />
+                <element signature="e#949#950#0" expanded="false" />
+                <element signature="e#980#981#0" expanded="false" />
+                <element signature="e#1013#1014#0" expanded="false" />
+                <element signature="e#1053#1054#0" expanded="false" />
+                <element signature="e#1088#1089#0" expanded="false" />
+                <element signature="e#1140#1141#0" expanded="false" />
+                <element signature="e#1178#1179#0" expanded="false" />
+                <element signature="e#1225#1226#0" expanded="false" />
+                <element signature="e#1265#1266#0" expanded="false" />
+                <element signature="e#1306#1307#0" expanded="false" />
+                <element signature="e#1339#1340#0" expanded="false" />
+                <element signature="e#1375#1376#0" expanded="false" />
+                <element signature="e#1408#1409#0" expanded="false" />
+                <element signature="e#1454#1455#0" expanded="false" />
+                <element signature="e#1488#1489#0" expanded="false" />
+                <element signature="e#1519#1520#0" expanded="false" />
+                <element signature="e#1547#1548#0" expanded="false" />
+                <element signature="e#1588#1589#0" expanded="false" />
+                <element signature="e#1622#1623#0" expanded="false" />
+                <element signature="e#1648#1649#0" expanded="false" />
+                <element signature="e#1673#1674#0" expanded="false" />
+                <element signature="e#1706#1707#0" expanded="false" />
+                <element signature="e#1734#1735#0" expanded="false" />
+                <element signature="e#1772#1773#0" expanded="false" />
+                <element signature="e#1801#1802#0" expanded="false" />
+                <element signature="e#1850#1851#0" expanded="false" />
+                <element signature="e#1886#1887#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +152,7 @@
         <entry file="file://$PROJECT_DIR$/src/dao/AlbumDAO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="143" column="47" selection-start-line="143" selection-start-column="47" selection-end-line="143" selection-end-column="47" />
+              <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -120,18 +161,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/scss/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
+            <state vertical-scroll-proportion="-9.0">
+              <caret line="275" column="15" selection-start-line="275" selection-start-column="15" selection-end-line="275" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RaTunesCreateAlbum.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RaTunesCreateAlbum.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/view/RaTunesCreateAlbum.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="110" selection-start-line="38" selection-start-column="110" selection-end-line="38" selection-end-column="110" />
+            <state vertical-scroll-proportion="0.32312405">
+              <caret line="41" column="116" selection-start-line="41" selection-start-column="116" selection-end-line="41" selection-end-column="116" />
               <folding />
             </state>
           </provider>
@@ -155,7 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebContent/css/fonts/fontomas-webfont.svg" />
         <option value="$PROJECT_DIR$/src/mvc/controller/AlbumController.java" />
         <option value="$PROJECT_DIR$/WebContent/js/ValidateInput.js" />
         <option value="$PROJECT_DIR$/WebContent/View/ValidatePassword.js" />
@@ -201,11 +241,12 @@
         <option value="$PROJECT_DIR$/src/de/ratunes/auth/LoginController.java" />
         <option value="$PROJECT_DIR$/src/dao/AlbumDAO.java" />
         <option value="$PROJECT_DIR$/src/dao/DatabaseConnection.java" />
-        <option value="$PROJECT_DIR$/WebContent/view/RaTunesCreateAlbum.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/scss/style.css" />
         <option value="$PROJECT_DIR$/src/de/ratunes/auth/JsListener.java" />
+        <option value="$PROJECT_DIR$/lib/java-json.jar!/org/json/JSONObject.java" />
         <option value="$PROJECT_DIR$/WebContent/js/albums.js" />
         <option value="$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java" />
+        <option value="$PROJECT_DIR$/WebContent/scss/style.css" />
+        <option value="$PROJECT_DIR$/WebContent/view/RaTunesCreateAlbum.jsp" />
       </list>
     </option>
   </component>
@@ -245,30 +286,12 @@
             <id>Android Lint</id>
           </State>
           <State>
-            <id>Internationalization issues</id>
-          </State>
-          <State>
-            <id>Internationalization issuesJava</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
             <id>Plugin DevKit</id>
-          </State>
-          <State>
-            <id>UI Form Problems</id>
-          </State>
-          <State>
-            <id>WebSocket issues</id>
-          </State>
-          <State>
-            <id>XPath</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>Android</id>
+            <id>AndroidLintManifestOrder</id>
           </State>
         </selected-state>
       </profile-state>
@@ -299,18 +322,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -321,10 +333,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="&lt; 1.8.0_40 &gt;" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -577,10 +585,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1234,13 +1253,12 @@
       <workItem from="1452163562465" duration="14000" />
       <workItem from="1452174867837" duration="19110000" />
       <workItem from="1452351323492" duration="14225000" />
-      <workItem from="1452591940800" duration="12755000" />
-    </task>
-    <task id="LOCAL-00024">
-      <created>1446825974781</created>
-      <option name="number" value="00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1446825974781</updated>
+      <workItem from="1452591940800" duration="14129000" />
+      <workItem from="1452612973754" duration="645000" />
+      <workItem from="1452613743894" duration="1695000" />
+      <workItem from="1452674349408" duration="59000" />
+      <workItem from="1452674458123" duration="151000" />
+      <workItem from="1452674656486" duration="4068000" />
     </task>
     <task id="LOCAL-00025">
       <created>1446826688766</created>
@@ -1530,11 +1548,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452606970008</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="AlbumDAOController">
+      <created>1452615278642</created>
+      <option name="number" value="00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1452615278644</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="482097000" />
+    <option name="totallyTimeSpent" value="490089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1186" extended-state="6" />
@@ -1549,8 +1573,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.478125" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28842506" sideWeight="0.4195096" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24840085" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922202" sideWeight="0.4466951" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1977612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="1.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="-3" y="17" width="1926" height="1172" />
@@ -1558,13 +1581,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27039847" sideWeight="0.44296375" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32922202" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24840085" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3444754" sideWeight="0.3921875" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3248106" sideWeight="0.43237486" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1612,18 +1636,11 @@
     <MESSAGE value="RaTunes intellij initial" />
     <MESSAGE value="korrekte anzeige von Songs und ihren eingeschaften" />
     <MESSAGE value="import / export Alben in json format" />
-    <option name="LAST_COMMIT_MESSAGE" value="import / export Alben in json format" />
+    <MESSAGE value="AlbumDAOController" />
+    <option name="LAST_COMMIT_MESSAGE" value="AlbumDAOController" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java</url>
-          <line>52</line>
-          <properties />
-          <option name="timeStamp" value="134" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="135" />
     </breakpoint-manager>
     <watches-manager>
@@ -1907,19 +1924,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/scss/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/de/ratunes/album/AlbumController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="46" selection-start-line="46" selection-start-column="46" selection-end-line="46" selection-end-column="46" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1927,15 +1938,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7845" column="12" selection-start-line="7845" selection-start-column="12" selection-end-line="7845" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/view/RaTunesCreateAlbum.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="38" column="110" selection-start-line="38" selection-start-column="110" selection-end-line="38" selection-end-column="110" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1943,15 +1945,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/AlbumDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="143" column="47" selection-start-line="143" selection-start-column="47" selection-end-line="143" selection-end-column="47" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#608#609#0" expanded="false" />
+            <element signature="e#642#643#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1964,9 +1962,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/mvc/model/Album.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35762483">
+        <state vertical-scroll-proportion="0.0">
           <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#915#916#0" expanded="false" />
+            <element signature="e#949#950#0" expanded="false" />
+            <element signature="e#980#981#0" expanded="false" />
+            <element signature="e#1013#1014#0" expanded="false" />
+            <element signature="e#1053#1054#0" expanded="false" />
+            <element signature="e#1088#1089#0" expanded="false" />
+            <element signature="e#1140#1141#0" expanded="false" />
+            <element signature="e#1178#1179#0" expanded="false" />
+            <element signature="e#1225#1226#0" expanded="false" />
+            <element signature="e#1265#1266#0" expanded="false" />
+            <element signature="e#1306#1307#0" expanded="false" />
+            <element signature="e#1339#1340#0" expanded="false" />
+            <element signature="e#1375#1376#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1454#1455#0" expanded="false" />
+            <element signature="e#1488#1489#0" expanded="false" />
+            <element signature="e#1519#1520#0" expanded="false" />
+            <element signature="e#1547#1548#0" expanded="false" />
+            <element signature="e#1588#1589#0" expanded="false" />
+            <element signature="e#1622#1623#0" expanded="false" />
+            <element signature="e#1648#1649#0" expanded="false" />
+            <element signature="e#1673#1674#0" expanded="false" />
+            <element signature="e#1706#1707#0" expanded="false" />
+            <element signature="e#1734#1735#0" expanded="false" />
+            <element signature="e#1772#1773#0" expanded="false" />
+            <element signature="e#1801#1802#0" expanded="false" />
+            <element signature="e#1850#1851#0" expanded="false" />
+            <element signature="e#1886#1887#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1974,7 +2002,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1982,16 +2012,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.69390583">
           <caret line="431" column="0" selection-start-line="431" selection-start-column="0" selection-end-line="431" selection-end-column="0" />
-          <folding>
-            <element signature="e#12414#12415#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/lib/java-json.jar!/org/json/JSONObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="453" column="0" selection-start-line="453" selection-start-column="0" selection-end-line="453" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="429" column="42" selection-start-line="429" selection-start-column="42" selection-end-line="429" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/AlbumDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1999,15 +2042,23 @@
     <entry file="file://$PROJECT_DIR$/WebContent/js/albums.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="151" column="68" selection-start-line="151" selection-start-column="68" selection-end-line="151" selection-end-column="68" />
+          <caret line="156" column="16" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java">
+    <entry file="file://$PROJECT_DIR$/WebContent/scss/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.805668">
-          <caret line="58" column="40" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="40" />
+        <state vertical-scroll-proportion="-9.0">
+          <caret line="275" column="15" selection-start-line="275" selection-start-column="15" selection-end-line="275" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/view/RaTunesCreateAlbum.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32312405">
+          <caret line="41" column="116" selection-start-line="41" selection-start-column="116" selection-end-line="41" selection-end-column="116" />
           <folding />
         </state>
       </provider>

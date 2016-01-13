@@ -37,6 +37,11 @@
 	</div>
 	<div class="task">
 		<input type="button" class="logoutButton" value="Logout ${sessionScope.user.name}" onclick="albums.logout()">
+		<div class="editorContain">
+			<i class="editButton fa fa-pencil-square-o fa-2x" onclick="albums.enableEditMode()" title="edit Album"></i>
+			<i class="saveButton fa fa-archive fa-2x" onclick="albums.clickSaveButton()" title="Saving changed files"></i>
+			<div class="newButton"></div>
+		</div>
 	</div>
 	<div class="menu">
 		<input id="albumsButton" type="button" class="albumTitle albumButton" onclick="albums.existingAlbumsDB()" value="EXISTING ALBUMS">
@@ -48,11 +53,7 @@
 	<div class="containContent">
 		<div id="albumCover">
 		</div>
-		<div class="editorContain">
-			<i class="editButton fa fa-pencil-square-o fa-2x" onclick="albums.enableEditMode()"></i>
-			<i class="saveButton fa fa-floppy-o fa-2x" onclick="albums.clickSaveButton()"></i>
-			<div class="newButton"></div>
-		</div>
+
 		<div id="albumInfoContainer">
 		</div>
 		<div id="songList">

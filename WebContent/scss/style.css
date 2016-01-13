@@ -273,12 +273,11 @@ input:hover {
 
 
 .editorContain{
-	float: right;
-	margin: 65px;
+	float: left;
 }
 
 .editButton{
-	color: #BEC455;
+	color: white;
 	margin: 10px;
 	text-align: center;
 	cursor:pointer;
@@ -286,11 +285,11 @@ input:hover {
 }
 
 .editButton:hover{
-	color: #73AD21;
+	color: #333333;
 }
 
 .saveButton{
-	color: #333333;
+	color: white;
 	margin: 10px;
 	text-align: center;
 	cursor:pointer;
@@ -298,7 +297,7 @@ input:hover {
 }
 
 .saveButton:hover{
-	color: #73AD21;
+	color: #333333;
 }
 
 .edit{
@@ -360,4 +359,25 @@ input:hover {
 #newAlbumButton:hover{
 	color: #73AD21;
 	cursor: pointer;
+}
+
+i.tooltip {
+	position: relative;
+	text-decoration: none;
+	color: black;
+}
+
+i.tooltip span {
+	display: none;
+}
+
+i.tooltip:hover span {
+	font-size: 10px;
+	position: absolute;
+	display: block;
+	top: 1.5em;
+	left: 2em;
+	border: 1px solid black;
+	background-color:white;
+	padding: 0.2em;
 }

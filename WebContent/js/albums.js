@@ -149,12 +149,12 @@ var albums= {
 
 
     sendAlbumDAOController: function(albumId){
-        var jsonAlbum = JSON.stringify(this.globalAlbums[albumId - 1]);
+        var editedAlbum = JSON.stringify(this.globalAlbums[albumId - 1]);
         $.ajax({
             url: "AlbumDAOController",
             dataType: 'json',
             data: {
-                albums: jsonAlbum
+                jsonAlbum: editedAlbum
             },
             type: 'POST',
             error: function () {

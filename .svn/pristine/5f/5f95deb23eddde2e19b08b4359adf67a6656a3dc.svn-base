@@ -36,7 +36,7 @@ public class AlbumDAOController extends HttpServlet {
         response.setContentType("application/json;charset=utf-8");
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject = new JSONObject(request.getParameter("jsonAlbum"));
+            jsonObject = new JSONObject(request.getParameter("albums"));
             System.out.println(jsonObject);
             } catch (JSONException e) {
             e.printStackTrace();
@@ -47,10 +47,7 @@ public class AlbumDAOController extends HttpServlet {
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
         AlbumDAO albumDAO = new AlbumDAO();
-
-//        for (int counter = 0; counter < albums.size(); counter++){
-//            albumDAO.addAlbum(albums.get(counter), user);
-//        }
+        albumDAO.addAlbum((Album) albums, user);
 
 
     }
