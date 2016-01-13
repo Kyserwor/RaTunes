@@ -40,10 +40,24 @@ var albums= {
     },
 
     showAlbum: function(albumId) {
+        albums.clearEditMode();
+        albums.showEditMode();
         albums.clearAlbumCover();
         albums.showAlbumCover(albumId);
         albums.showAlbumInfo(albumId);
         albums.showSongs(this.globalAlbums[albumId].songs);
+    },
+
+    showEditMode: function(){
+        var editorContain = $(".editorContain");
+        var editButtons = $("<i class='editButton fa fa-pencil-square-o fa-2x' onclick='albums.enableEditMode()' title='edit Album'></i>"
+                                + "<i class='saveButton fa fa-archive fa-2x' onclick='albums.clickSaveButton()' title='Saving changed files'></i>"
+                                + "<div class='newButton'></div>");
+        editorContain.append(editButtons);
+    },
+
+    clearEditMode: function(){
+        $(".editorContain").empty();
     },
 
     showAlbumCover: function(albumId){
@@ -91,16 +105,20 @@ var albums= {
         if (document.querySelector("#newSongButton") !== null){
         }else {
             albums.enableNewSongButton();
+
+
+
+
             albums.enableNewAlbumButton();
         }
     },
 
     enableNewSongButton: function(){
-        $(".newButton").append("<i id='newSongButton' class='fa fa-check-circle' onclick='albums.addNewSong()'>new Song</i><br>");
+        $(".editorContain").append("<i id='newSongButton' class='fa fa-file-o ' onclick='albums.addNewSong()'> new Song</i>");
     },
 
     enableNewAlbumButton: function(){
-        $(".newButton").append("<i id='newAlbumButton' class='fa fa-check-circle' onclick='albums.addNewAlbum()'>new Album</i>")
+        $(".editorContain").append("<i id='newAlbumButton' class='fa fa-file-o ' onclick='albums.addNewAlbum()'> new Album</i>")
     },
 
     disableNewButton: function(){

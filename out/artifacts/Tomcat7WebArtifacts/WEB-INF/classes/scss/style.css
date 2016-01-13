@@ -2,7 +2,6 @@
 	float: none;
 	margin-left: auto;
 	margin-right: auto;
-	/**border:3px solid #73AD21;**/
 }
 
 body {
@@ -57,8 +56,6 @@ a {
 	-ms-flex-order: 1;
 	order: 1;
 	padding: 0 20px;
-	/*border-bottom: 1px solid;*/
-	/*border-bottom-color: #333333;*/
 }
 
 .right {
@@ -68,16 +65,12 @@ a {
 .task{
 	background-color: #73ad21;
 	height: 60px;
-	/*border-bottom: 1px solid;*/
-	/*border-bottom-color: #333333;*/
 }
 
 .menuContent{
 	background-color: #6783b2;
 	width: auto;
 	height: auto;
-	/*border-bottom: 1px solid;*/
-	/*border-bottom-color: #333333;*/
 }
 
 .logoutButton{
@@ -99,11 +92,6 @@ a {
 	background-color: white;
 	width: auto;
 	height: 100%;
-}
-
-input:hover {
-	/*background: #8FBC8F;*/
-	/*border: 2px solid #6baff1;*/
 }
 
 .logoContain:hover{
@@ -149,7 +137,7 @@ input:hover {
 	width: 80px;
 	height: 20px;
 	background: transparent;
-	-webkit-transition: width 2s; /* Safari */
+	-webkit-transition: width 2s;
 	transition: width 2s;
 }
 
@@ -164,7 +152,6 @@ input:hover {
 }
 
 .albumButton{
-	/*border-radius: 60px;*/
 	height: 50px;
 	margin: 5px;
 	color: #fffeff;
@@ -190,13 +177,11 @@ input:hover {
 	margin: 15px;
 	height: auto;
 	width: auto;
-	/*border: 2px solid #333333;*/
 }
 
 .gray{
 	text-align: center;
 	color: #333333;
-	/*background-color: #e5e5e6;*/
 	text-decoration: underline;
 }
 
@@ -204,7 +189,6 @@ input:hover {
 	color: #73ad21;
 	margin: 0px;
 	text-align: center;
-	/*background-color: #7b878c;*/
 }
 
 #songList{
@@ -213,7 +197,6 @@ input:hover {
 	margin: 370px;
 	height: 30px;
 	width: 100%;
-	/*background-color: red;*/
 }
 
 #songs{
@@ -274,12 +257,14 @@ input:hover {
 
 .editorContain{
 	float: left;
+	height: 100%;
+	width: 50%;
 }
 
 .editButton{
 	color: white;
 	margin: 10px;
-	text-align: center;
+	float: left;
 	cursor:pointer;
 
 }
@@ -291,7 +276,7 @@ input:hover {
 .saveButton{
 	color: white;
 	margin: 10px;
-	text-align: center;
+	float: left;
 	cursor:pointer;
 
 }
@@ -344,20 +329,24 @@ input:hover {
 }
 
 #newSongButton{
-	color: #333333;
+	margin: 10px;
+	float: left;
+	color: white;
 }
 
 #newAlbumButton{
-	color: #333333;
+	margin: 10px;
+	float: left;
+	color: white;
 }
 
 #newSongButton:hover{
-	color: #73AD21;
+	color: #333333;
 	cursor: pointer;
 } 
 
 #newAlbumButton:hover{
-	color: #73AD21;
+	color: #333333;
 	cursor: pointer;
 }
 

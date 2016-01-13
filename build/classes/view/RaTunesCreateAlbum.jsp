@@ -38,9 +38,6 @@
 	<div class="task">
 		<input type="button" class="logoutButton" value="Logout ${sessionScope.user.name}" onclick="albums.logout()">
 		<div class="editorContain">
-			<i class="editButton fa fa-pencil-square-o fa-2x" onclick="albums.enableEditMode()" title="edit Album"></i>
-			<i class="saveButton fa fa-archive fa-2x" onclick="albums.clickSaveButton()" title="Saving changed files"></i>
-			<div class="newButton"></div>
 		</div>
 	</div>
 	<div class="menu">
