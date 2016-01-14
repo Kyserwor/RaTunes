@@ -38,8 +38,8 @@ body {
 }
 
 #albumsButton{
-	border-radius: 12px;
-	border: 1px solid #73ad21; !important
+	border-radius: 0px !important;
+	border: 1px solid #73ad21 !important;
 }
 
 a {
@@ -88,7 +88,8 @@ a {
 }
 
 .containContent{
-	padding: 25px;
+	padding-top: 35px;
+	padding-left: 23%;
 	background-color: white;
 	width: auto;
 	height: 100%;
@@ -119,7 +120,6 @@ a {
  }
 
 .albumCover{
-	margin: 35px;
 	height: 291.672px;
 	width: 291.672px;
 	border: 1px solid #73ad21;
@@ -156,7 +156,11 @@ a {
 	margin: 5px;
 	color: #fffeff;
 	width: 100%;
-	border: 2px solid #333333;
+	border: solid 2px;
+	border-left-color:#73AD21;
+	border-right-color: #73AD21;
+	border-bottom-color: transparent;
+	border-top-color: transparent;
 	background-color: #333333;
 }
 
@@ -194,7 +198,6 @@ a {
 #songList{
 	text-align: center;
 	float: top;
-	margin: 370px;
 	height: 30px;
 	width: 100%;
 }
@@ -204,32 +207,27 @@ a {
 }
 
 .songPart{
-	color: white !important;
-	background-color: #333333 !important;
+	color: gray !important;
+	background-color: white !important;
 	text-align: center;
-	border-radius: 45px;
 	float: left;
-	width: 50%;
+	width: 70%;
 	height: 35px;
-	margin-left: 25px;
-	margin-bottom: 25px;
-	/*border: 1px solid;*/
+	border-bottom: 2px solid #333333 !important;
 }
 
 .songPart:hover{
-	background-color: #73ad21 !important;
+	background-color: #eeeeee  !important;
 }
 
 .songDescription{
 	position: static;
 	border: 1px solid #73ad21;
-	border-radius: 10px;
 	background-color: rgba(170, 255, 46, 0);
 	text-align: center;
 	float: left;
-	width: 50%;
+	width: 70%;
 	height: 35px;
-	margin-left: 25px;
 	margin-bottom: 25px;
 }
 

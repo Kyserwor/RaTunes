@@ -114,11 +114,11 @@ var albums= {
     },
 
     enableNewSongButton: function(){
-        $(".editorContain").append("<i id='newSongButton' title='new Song' class='fa fa-file fa-2x' onclick='albums.addNewSong()'></i>");
+        $(".editorContain").append("<i id='newSongButton' title='new Song' class='newButton fa fa-file-text fa-2x' onclick='albums.addNewSong()'></i>");
     },
 
     enableNewAlbumButton: function(){
-        $(".editorContain").append("<i id='newAlbumButton' title='new Album' class='fa fa-file fa-2x' onclick='albums.addNewAlbum()'></i>")
+        $(".editorContain").append("<i id='newAlbumButton' title='new Album' class='newButton fa fa-file-text fa-2x' onclick='albums.addNewAlbum()'></i>")
     },
 
     disableNewButton: function(){
@@ -147,7 +147,8 @@ var albums= {
     },
 
     clickSaveButton: function(){
-        albums.enableLoadArea();
+        albums.clearLoadToken();
+        albums.enableLoadToken();
         albums.disableEditMode();
         var albumTitle = document.getElementsByName("albumTitle");
         var albumId = $(albumTitle).attr("id");
@@ -163,9 +164,13 @@ var albums= {
 
     },
 
-    enableLoadArea: function(){
-        $(".editorContain").append("<div id='loadToken'></div>");
-        $("#loadToken").append("<i class='loadToken fa fa-spinner fa-spin fa-2x' title='load'></i>");
+    enableLoadToken: function(){
+            $(".editorContain").append("<div id='loadToken'></div>");
+            $("#loadToken").append("<i class='loadToken fa fa-spinner fa-spin fa-2x' title='load'></i>");
+    },
+
+    clearLoadToken: function(){
+        $("#loadToken").empty();
     },
 
 
@@ -188,7 +193,7 @@ var albums= {
                 alert("Error Occured");
             },
             success: function () {
-                albums.savedData();
+                albums.clearLoadToken();
             }
         });
     },
