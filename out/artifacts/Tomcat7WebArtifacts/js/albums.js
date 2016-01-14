@@ -126,6 +126,7 @@ var albums= {
     },
 
     addNewSong: function () {
+        $("#songList").append("<input id='newSong' class='songPart edit enableEdit' name='albumSongs' value='new Song' type='text'>");
     },
 
     addNewAlbum: function(){
@@ -146,6 +147,7 @@ var albums= {
     },
 
     clickSaveButton: function(){
+        albums.enableLoadArea();
         albums.disableEditMode();
         var albumTitle = document.getElementsByName("albumTitle");
         var albumId = $(albumTitle).attr("id");
@@ -160,6 +162,12 @@ var albums= {
         albums.disableNewButton();
 
     },
+
+    enableLoadArea: function(){
+        $(".editorContain").append("<div id='loadToken'></div>");
+        $("#loadToken").append("<i class='loadToken fa fa-spinner fa-spin fa-2x' title='load'></i>");
+    },
+
 
     logout: function(){
         window.location.href = "/view/RaTunesRegistration.jsp";

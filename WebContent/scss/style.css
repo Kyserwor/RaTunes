@@ -370,23 +370,17 @@ a {
 	cursor: pointer;
 }
 
-i.tooltip {
-	position: relative;
-	text-decoration: none;
-	color: black;
+#loadToken{
+	background-color: #333333;
+	height: 100%;
+	border: 1px solid #73ad21;
+	width: 20%;
+	padding: 10px;
+	float: left;
+	color: white;
 }
 
-i.tooltip span {
-	display: none;
-}
-
-i.tooltip:hover span {
-	font-size: 10px;
-	position: absolute;
-	display: block;
-	top: 1.5em;
-	left: 2em;
-	border: 1px solid black;
-	background-color:white;
-	padding: 0.2em;
+#loadToken:hover{
+	color: #333333;
+	background-color: #f0f0f1;
 }

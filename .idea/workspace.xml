@@ -50,11 +50,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="albums.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="albums.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/js/albums.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.5743741">
+              <caret line="167" column="65" selection-start-line="167" selection-start-column="65" selection-end-line="167" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -162,11 +162,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebContent/scss/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.61858976">
-              <caret line="360" column="21" selection-start-line="360" selection-start-column="21" selection-end-line="360" selection-end-column="21" />
+            <state vertical-scroll-proportion="-5.7818184">
+              <caret line="373" column="30" selection-start-line="373" selection-start-column="30" selection-end-line="373" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -249,8 +249,8 @@
         <option value="$PROJECT_DIR$/lib/java-json.jar!/org/json/JSONObject.java" />
         <option value="$PROJECT_DIR$/src/de/ratunes/auth/AlbumDAOController.java" />
         <option value="$PROJECT_DIR$/WebContent/view/RaTunesCreateAlbum.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/js/albums.js" />
         <option value="$PROJECT_DIR$/WebContent/scss/style.css" />
+        <option value="$PROJECT_DIR$/WebContent/js/albums.js" />
       </list>
     </option>
   </component>
@@ -1263,7 +1263,7 @@
       <workItem from="1452674349408" duration="59000" />
       <workItem from="1452674458123" duration="151000" />
       <workItem from="1452674656486" duration="16239000" />
-      <workItem from="1452758451730" duration="2880000" />
+      <workItem from="1452758451730" duration="5166000" />
     </task>
     <task id="LOCAL-00026">
       <created>1447067119386</created>
@@ -1563,7 +1563,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="505140000" />
+    <option name="totallyTimeSpent" value="507426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1932" height="1186" extended-state="0" />
@@ -2055,18 +2055,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/js/albums.js">
+    <entry file="file://$PROJECT_DIR$/WebContent/scss/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="131" column="6" selection-start-line="131" selection-start-column="6" selection-end-line="131" selection-end-column="6" />
+        <state vertical-scroll-proportion="-5.7818184">
+          <caret line="373" column="30" selection-start-line="373" selection-start-column="30" selection-end-line="373" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/scss/style.css">
+    <entry file="file://$PROJECT_DIR$/WebContent/js/albums.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.61858976">
-          <caret line="360" column="21" selection-start-line="360" selection-start-column="21" selection-end-line="360" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.5743741">
+          <caret line="167" column="65" selection-start-line="167" selection-start-column="65" selection-end-line="167" selection-end-column="65" />
           <folding />
         </state>
       </provider>
