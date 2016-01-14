@@ -114,11 +114,11 @@ var albums= {
     },
 
     enableNewSongButton: function(){
-        $(".editorContain").append("<i id='newSongButton' class='fa fa-file-o ' onclick='albums.addNewSong()'> new Song</i>");
+        $(".editorContain").append("<i id='newSongButton' title='new Song' class='fa fa-file fa-2x' onclick='albums.addNewSong()'></i>");
     },
 
     enableNewAlbumButton: function(){
-        $(".editorContain").append("<i id='newAlbumButton' class='fa fa-file-o ' onclick='albums.addNewAlbum()'> new Album</i>")
+        $(".editorContain").append("<i id='newAlbumButton' title='new Album' class='fa fa-file fa-2x' onclick='albums.addNewAlbum()'></i>")
     },
 
     disableNewButton: function(){
