@@ -33,7 +33,7 @@
 			<i class="fa fa-mouse-pointer fa-spin"></i>
 		</div>
 		<br>
-		<h1 class="italic fa fa-music fa-3x"> RaTunes music management</h1>
+		<h1 class="italic fa fa-music"> RaTunes music management</h1>
 	</div>
 	<div class="task">
 		<input type="button" class="logoutButton" value="Logout ${sessionScope.user.name}" onclick="albums.logout()">

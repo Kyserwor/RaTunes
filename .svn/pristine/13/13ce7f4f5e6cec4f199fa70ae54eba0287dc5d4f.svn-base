@@ -140,19 +140,15 @@ var albums= {
         $.each(songList, function(key, value){
             shownSongs.append("<input id='"+value.id+"' class='songPart edit' name='albumSongs' value='"+value.title+"' type='text' disabled='disabled'>");
         })
-
-        $(".songPart" ).mouseover(function() {
-            $( ".songPart" ).append("<i class='fa fa-youtube-play'></i>" );
-        });
     },
-
-
 
     clearSongs: function(){
         $("#songList").empty();
     },
 
     clickSaveButton: function(){
+        albums.clearLoadToken();
+        albums.enableLoadToken();
         albums.disableEditMode();
         var albumTitle = document.getElementsByName("albumTitle");
         var albumId = $(albumTitle).attr("id");
@@ -167,6 +163,16 @@ var albums= {
         albums.disableNewButton();
 
     },
+
+    enableLoadToken: function(){
+            $(".editorContain").append("<div id='loadToken'></div>");
+            $("#loadToken").append("<i class='loadToken fa fa-spinner fa-spin fa-2x' title='load'></i>");
+    },
+
+    clearLoadToken: function(){
+        $("#loadToken").empty();
+    },
+
 
     logout: function(){
         window.location.href = "/view/RaTunesRegistration.jsp";

@@ -15,11 +15,11 @@ body {
 }
 
 .logoContain{
-	margin: 0.5%;
-	width: 40px;
-	height: 40px;
+	margin: 13px;
+	width: 90px;
+	height: 90px;
 	border-radius: 150px;
-	border: 1px solid #73ad21;
+	border: 2px solid #73ad21;
 	-webkit-border-radius: 260px;
 	-moz-border-radius: 260px;
 	background: url(/images/RaTunesCover.png) no-repeat;
@@ -27,10 +27,6 @@ body {
 	display: block;
 	float: left;
 	padding: 5px;
-}
-
-.logoContain:hover{
-	border: 1px solid #6baff1;
 }
 
 .menu{
@@ -53,7 +49,7 @@ a {
 
 .-cx-PRIVATE-Shell__nav {
 	background-image: linear-gradient( #333333 100%, transparent 50%);
-	height: 6%;
+	height: 120px;
 	border-bottom-width: 1px;
 	-webkit-box-ordinal-group: 2;
 	-webkit-order: 1;
@@ -68,7 +64,7 @@ a {
 
 .task{
 	background-color: #73ad21;
-	height: 4%;
+	height: 60px;
 }
 
 .menuContent{
@@ -94,9 +90,13 @@ a {
 .containContent{
 	padding-top: 35px;
 	padding-left: 23%;
-	background-color: rgba(115, 173, 33, 0.24);
+	background-color: white;
 	width: auto;
 	height: 100%;
+}
+
+.logoContain:hover{
+	border: 3px solid #6baff1;
 }
 
 .logoutButton:hover{
