@@ -50,8 +50,8 @@ var albums= {
 
     showEditMode: function(){
         var editorContain = $(".editorContain");
-        var editButtons = $("<i class='editButton fa fa-pencil-square-o fa-2x' onclick='albums.enableEditMode()' title='edit Album'></i>"
-                                + "<i class='saveButton fa fa-archive fa-2x' onclick='albums.clickSaveButton()' title='Saving changed files'></i>"
+        var editButtons = $("<i class='editButton fa fa-pencil-square-o' onclick='albums.enableEditMode()' title='edit Album'></i>"
+                                + "<i class='saveButton fa fa-archive ' onclick='albums.clickSaveButton()' title='Saving changed files'></i>"
                                 + "<div class='newButton'></div>");
         editorContain.append(editButtons);
     },
@@ -114,11 +114,11 @@ var albums= {
     },
 
     enableNewSongButton: function(){
-        $(".editorContain").append("<i id='newSongButton' title='new Song' class='newButton fa fa-file-text fa-2x' onclick='albums.addNewSong()'></i>");
+        $(".editorContain").append("<i id='newSongButton' title='new Song' class='newButton fa fa-file-text' onclick='albums.addNewSong()'></i>");
     },
 
     enableNewAlbumButton: function(){
-        $(".editorContain").append("<i id='newAlbumButton' title='new Album' class='newButton fa fa-file-text fa-2x' onclick='albums.addNewAlbum()'></i>")
+        $(".editorContain").append("<i id='newAlbumButton' title='new Album' class='newButton fa fa-file-text' onclick='albums.addNewAlbum()'></i>")
     },
 
     disableNewButton: function(){

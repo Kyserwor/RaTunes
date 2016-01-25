@@ -167,4 +167,8 @@ public class AlbumDAO {
                 "(?)";
         //SingleCallDB(queryString, artist.getName());
     }
+
+    public void updateAlbum(Album album){
+
+    }
 }

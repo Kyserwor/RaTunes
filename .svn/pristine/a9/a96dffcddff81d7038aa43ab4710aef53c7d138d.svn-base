@@ -208,12 +208,12 @@ a {
 
 .songPart{
 	color: gray !important;
-	background-color: rgba(115, 173, 33, 0.24) !important;;
+	background-color: white !important;
 	text-align: center;
 	float: left;
 	width: 70%;
 	height: 35px;
-	border-bottom: 1px solid rgba(115, 173, 33, 0.48) !important;
+	border-bottom: 2px solid #333333 !important;
 }
 
 .songPart:hover{

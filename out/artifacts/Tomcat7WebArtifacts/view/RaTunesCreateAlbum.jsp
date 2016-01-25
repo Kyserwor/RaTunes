@@ -57,7 +57,9 @@
 		</div>
 
 		<div id="footer">
+			<i class="fa fa-chevron-left"></i>
 			<i class="musicPlayer fa fa-play"></i>
+			<i class="fa fa-chevron-right"></i>
 			<i class="musicPlayer fa fa-volume-down"></i>
 			<i class="musicPlayer fa fa-volume-off"></i>
 			<i class="musicPlayer fa fa-volume-up"></i>
