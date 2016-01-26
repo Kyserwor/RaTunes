@@ -49,13 +49,9 @@ public class AlbumDAOController extends HttpServlet {
         User user = (User) session.getAttribute("user");
         Album album = new AlbumDAO().getAlbumById(1);
 
-        try{
-            Gson g = new Gson();
-            Album album1 = g.fromJson(String.valueOf(jsonObject), Album.class);
+        Gson g = new Gson();
+        Album album1 = g.fromJson(String.valueOf(jsonObject), Album.class);
 
-        } catch (Exception e){
-            System.out.println(e.getMessage());
-        }
 
 
         String wsqDFWeadfh = "safsdfsdfsd";

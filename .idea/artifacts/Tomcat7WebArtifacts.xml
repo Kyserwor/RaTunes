@@ -8,6 +8,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Java EE 6-Java EE 6" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/gson-2.5.jar" />
         </element>
       </element>
       <element id="dir-copy" path="$PROJECT_DIR$/WebContent" />
