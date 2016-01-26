@@ -26,7 +26,15 @@ var albums= {
         $.each(albumList.albums, function (key, value) {
             albums.printAlbumTitle(value, key)
         })
-        this.globalAlbums = albumList.albums;
+        albums.albumIdMappingToIndex(albumList.albums);
+    },
+
+    albumIdMappingToIndex: function(albums) {
+        for(var index = 0; index <= albums.length; index++) {
+            var album = albums[index];
+            int i = album.id;
+            this.globalAlbums[album.id] = album;
+        }
     },
 
     clearIdDiv: function() {
@@ -174,7 +182,7 @@ var albums= {
 
 
     sendAlbumDAOController: function(albumId){
-        var editedAlbum = JSON.stringify(this.globalAlbums[albumId - 1]);
+        var editedAlbum = JSON.stringify(this.globalAlbums[albumId]);
         $.ajax({
             url: "AlbumDAOController",
             dataType: 'json',
@@ -184,7 +192,7 @@ var albums= {
             type: 'POST',
             error: function () {
 
-                alert("Error Occured");
+                //alert("Error Occured");
             },
             success: function () {
             }

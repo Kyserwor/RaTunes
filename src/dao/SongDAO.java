@@ -89,8 +89,6 @@ public class SongDAO {
             statement.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e);
-        } finally {
-            databaseConnection.closeDatabase();
         }
     }
 

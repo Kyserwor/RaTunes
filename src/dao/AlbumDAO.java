@@ -174,7 +174,7 @@ public class AlbumDAO {
             String query = "UPDATE " +
                     "ratunes.album " +
                     "SET " +
-                    "ratunes.album.title = ?" +
+                    "ratunes.album.title = ? " +
                     "WHERE " +
                     "ratunes.album.id = ?";
             PreparedStatement statement = databaseConnection.getStatement(query);

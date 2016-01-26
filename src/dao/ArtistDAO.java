@@ -128,8 +128,6 @@ public class ArtistDAO {
             statement.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e);
-        } finally {
-            databaseConnection.closeDatabase();
         }
     }
 

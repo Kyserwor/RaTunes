@@ -43,23 +43,13 @@ public class AlbumDAOController extends HttpServlet {
             e.printStackTrace();
         }
 
-        List<Album> albums = new ArrayList<>();
 
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        Album album = new AlbumDAO().getAlbumById(1);
 
         Gson g = new Gson();
-        Album album1 = g.fromJson(String.valueOf(jsonObject), Album.class);
+        Album album = g.fromJson(String.valueOf(jsonObject), Album.class);
 
-
-
-        String wsqDFWeadfh = "safsdfsdfsd";
-
-//        for (int counter = 0; counter < albums.size(); counter++){
-//            albumDAO.addAlbum(albums.get(counter), user);
-//        }
-
-
+        new AlbumDAO().updateAlbum(album);
     }
 }
