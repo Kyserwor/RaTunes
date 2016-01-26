@@ -187,7 +187,6 @@ var albums= {
                 alert("Error Occured");
             },
             success: function () {
-                albums.clearLoadToken();
             }
         });
     },

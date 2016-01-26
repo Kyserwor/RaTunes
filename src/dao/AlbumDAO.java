@@ -69,11 +69,12 @@ public class AlbumDAO {
                     "ratunes.albumtoartist(albumID, artistID) "+
                     "VALUES (?, ?)";
             PreparedStatement statement = databaseConnection.getStatement(queryString);
-            statement.setInt(1, album.getId());
-            for (Artist artist: album.getArtists()){
+            for (Artist artist : album.getArtists()){
+                statement.setInt(1, album.getId());
                 statement.setInt(2, artist.getId());
-                statement.executeUpdate();
             }
+            statement.executeUpdate();
+
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -169,6 +170,25 @@ public class AlbumDAO {
     }
 
     public void updateAlbum(Album album){
-
+        try {
+            String query = "UPDATE " +
+                    "ratunes.album " +
+                    "SET " +
+                    "ratunes.album.title = ?" +
+                    "WHERE " +
+                    "ratunes.album.id = ?";
+            PreparedStatement statement = databaseConnection.getStatement(query);
+            statement.setString(1, album.getTitle());
+            statement.setInt(2, album.getId());
+            statement.executeUpdate();
+            ArtistDAO artistDAO = new ArtistDAO();
+            artistDAO.updateArtists(album.getArtists());
+            SongDAO songDAO = new SongDAO();
+            songDAO.updateSongs(album.getSongs());
+        } catch (SQLException e) {
+            System.out.println(e);
+        } finally {
+            databaseConnection.closeDatabase();
+        }
     }
 }

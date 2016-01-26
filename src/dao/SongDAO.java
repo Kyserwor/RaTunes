@@ -94,6 +94,12 @@ public class SongDAO {
         }
     }
 
+    public void updateSongs(List<Song> songs){
+        for (Song song : songs){
+            updateSong(song);
+        }
+    }
+
     private void updateAssignSongToArtist(Song song){
         try {
             deleteAssignSongToArtist(song);

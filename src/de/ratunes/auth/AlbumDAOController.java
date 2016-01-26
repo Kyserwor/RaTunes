@@ -1,5 +1,6 @@
 package de.ratunes.auth;
 
+import com.google.gson.Gson;
 import dao.AlbumDAO;
 import mvc.model.Album;
 import mvc.model.User;
@@ -46,7 +47,18 @@ public class AlbumDAOController extends HttpServlet {
 
         HttpSession session = request.getSession();
         User user = (User) session.getAttribute("user");
-        AlbumDAO albumDAO = new AlbumDAO();
+        Album album = new AlbumDAO().getAlbumById(1);
+
+        try{
+            Gson g = new Gson();
+            Album album1 = g.fromJson(String.valueOf(jsonObject), Album.class);
+
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+
+        String wsqDFWeadfh = "safsdfsdfsd";
 
 //        for (int counter = 0; counter < albums.size(); counter++){
 //            albumDAO.addAlbum(albums.get(counter), user);

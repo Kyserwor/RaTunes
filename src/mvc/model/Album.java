@@ -1,5 +1,4 @@
 package mvc.model;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -48,7 +47,7 @@ public class Album {
     public void setArtists(List<Artist> artists) {
         this.artists = artists;
     }
-    
+
     public void addArtist(Artist artist){
         this.artists.add(artist);
     }

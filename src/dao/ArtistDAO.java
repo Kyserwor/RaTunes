@@ -38,6 +38,12 @@ public class ArtistDAO {
         }
     }
 
+    public void addArtists(List<Artist> artists){
+        for (Artist artist : artists){
+            addArtist(artist);
+        }
+    }
+
     private void assignAlbumToArtist(Artist artist){
         try {
             String queryString = "INSERT INTO ratunes.albumtoartist " +
@@ -55,14 +61,8 @@ public class ArtistDAO {
         }
     }
 
-    public void addArtists(List<Artist> artists) {
-        for (Artist artist : artists) {
-            addArtist(artist);
-        }
-    }
-
     public List<Artist> getArtistsByAlbumID(int albumID){
-        List<Artist> artists = new ArrayList<Artist>();
+        List<Artist> artists = new ArrayList<>();
         try {
             String query = "SELECT " +
                     "ratunes.artist.id, " +
@@ -116,25 +116,26 @@ public class ArtistDAO {
 
     public void updateArtist(Artist artist){
         try {
-            String query = "SELECT " +
-                    "ratunes.artist.id, " +
-                    "ratunes.artist.name " +
-                    "FROM ratunes.artist " +
-                    "INNER JOIN ratunes.songtoartist" +
-                    "ON ratunes.artist.id = ratunes.songtoartist.artistID " +
-                    "WHERE ratunes.songtoartist.songID = ?";
+            String query = "UPDATE " +
+                    "ratunes.artist " +
+                    "SET " +
+                    "ratunes.artist.name = ?" +
+                    "WHERE" +
+                    "ratunes.artist.id = ß";
             PreparedStatement statement = databaseConnection.getStatement(query);
-            statement.setInt(1, song.getId());
-            ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()) {
-                artists.add(new Artist(resultSet.getInt("id"),
-                        resultSet.getString("name"),
-                        song.getAlbumID()));
-            }
+            statement.setString(1, artist.getName());
+            statement.setInt(2, artist.getId());
+            statement.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e);
         } finally {
             databaseConnection.closeDatabase();
+        }
+    }
+
+    public void updateArtists(List<Artist> artists){
+        for (Artist artist : artists){
+            updateArtist(artist);
         }
     }
 }
