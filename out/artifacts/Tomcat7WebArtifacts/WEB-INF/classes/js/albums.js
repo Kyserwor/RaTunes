@@ -24,17 +24,19 @@ var albums= {
     albumsToList: function(albumList) {
         this.clearIdDiv();
         $.each(albumList.albums, function (key, value) {
-            albums.printAlbumTitle(value, key)
+            albums.printAlbumTitle(value, key);
+            albums.addAlbumGlobaleAlbumsIndexId(value, key);
         })
-        albums.albumIdMappingToIndex(albumList.albums);
+        this.globalAlbums = albumList.albums;
     },
 
-    albumIdMappingToIndex: function(albums) {
-        for(var index = 0; index <= albums.length; index++) {
-            var album = albums[index];
-            int i = album.id;
-            this.globalAlbums[album.id] = album;
-        }
+    addAlbumGlobaleAlbumsIndexId: function(album, id) {
+        this.globalAlbums[id] = album;
+        //for(var index = 0; index <= albums.length; index++) {
+        //    var album = albums[index];
+        //    var albumId = album.id;
+        //    this.globalAlbums[albumId] = album;
+        //}
     },
 
     clearIdDiv: function() {
@@ -43,17 +45,17 @@ var albums= {
 
     printAlbumTitle: function(album, key) {
         var ul = $("#albumList");
-        var li = $("<input id='albumTitleId' type='button' " + album.id + " class='albumTitle albumButton' onclick='albums.showAlbum(" + key + ")' value='" + album.title + "'><br>");
+        var li = $("<input id='albumTitleId' type='button' " + key + " class='albumTitle albumButton' onclick='albums.showAlbum(" + key + ")' value='" + album.title + "'><br>");
         ul.append(li);
     },
 
-    showAlbum: function(albumId) {
+    showAlbum: function(albumKey) {
         albums.clearEditMode();
         albums.showEditMode();
         albums.clearAlbumCover();
-        albums.showAlbumCover(albumId);
-        albums.showAlbumInfo(albumId);
-        albums.showSongs(this.globalAlbums[albumId].songs);
+        albums.showAlbumCover(albumKey);
+        albums.showAlbumInfo(albumKey);
+        albums.showSongs(this.globalAlbums[albumKey].songs);
     },
 
     showEditMode: function(){
@@ -68,10 +70,10 @@ var albums= {
         $(".editorContain").empty();
     },
 
-    showAlbumCover: function(albumId){
-        var coverTitle = $("<h4 class='albumCoverTitle'>" + this.globalAlbums[albumId].title + "</h4>");
+    showAlbumCover: function(albumKey){
         var albumCover = $("<div id='albumCover' class='albumCover'></div>");
-        $("#albumCover").append(albumCover);
+        var coverTitle = $("<h4 class='albumCoverTitle'>" + this.globalAlbums[albumKey].title + "</h4>");
+        $('#albumCover').append(albumCover);
         albumCover.append(coverTitle);
     },
 
@@ -95,6 +97,8 @@ var albums= {
             artist.addClass("infoPart2 edit");
             artist.attr("name","albumArtists");
             artist.attr("id",value.id);
+
+
             albumArtists.append(artist,"<br>");
         })
 
