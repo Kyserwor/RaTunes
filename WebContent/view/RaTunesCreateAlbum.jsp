@@ -12,11 +12,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="../favicon.ico">
 <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="/css/menu.css">
 <link rel="stylesheet" type="text/css" href="../css/demo.css" />
-<script type="text/javascript" src="/js/sidebar.js"></script>
 	<script src="../js/modernizr.custom.js"></script>
-<script type="text/javascript" src="ValidateInput.js"></script>
 	<script type="text/javascript" src="/js/albums.js"></script>
 	<script type="text/javascript" src="/js/jquery-2.1.4.js"></script>
 	<link rel="stylesheet" type="text/css" href="/css/font-awesome-4.4.0/css/font-awesome.css">
@@ -42,6 +39,7 @@
 	</div>
 	<div class="menu">
 		<input id="albumsButton" type="button" class="albumTitle albumButton" onclick="albums.existingAlbumsDB()" value="EXISTING ALBUMS">
+		<i id="addAlbum" type="button" class="fa fa-plus fa-2x" title="new Album" onclick="albums.addAlbum()"></i>
 		<div id="albums">
 			<div id="albumList">
 			</div>

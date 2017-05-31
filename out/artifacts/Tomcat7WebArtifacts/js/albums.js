@@ -16,27 +16,17 @@ var albums= {
                 alert("Error Occured");
             },
             success: function (data) {
-                albums.albumsToList(data)
+                albums.albumsToList(data);
             }
         });
     },
 
     albumsToList: function(albumList) {
         this.clearIdDiv();
+        this.globalAlbums = albumList.albums;
         $.each(albumList.albums, function (key, value) {
             albums.printAlbumTitle(value, key);
-            albums.addAlbumGlobaleAlbumsIndexId(value, key);
         })
-        this.globalAlbums = albumList.albums;
-    },
-
-    addAlbumGlobaleAlbumsIndexId: function(album, id) {
-        this.globalAlbums[id] = album;
-        //for(var index = 0; index <= albums.length; index++) {
-        //    var album = albums[index];
-        //    var albumId = album.id;
-        //    this.globalAlbums[albumId] = album;
-        //}
     },
 
     clearIdDiv: function() {
@@ -51,19 +41,20 @@ var albums= {
 
     showAlbum: function(albumKey) {
         albums.clearEditMode();
-        albums.showEditMode();
+        albums.showEditMode(albumKey);
         albums.clearAlbumCover();
         albums.showAlbumCover(albumKey);
         albums.showAlbumInfo(albumKey);
-        albums.showSongs(this.globalAlbums[albumKey].songs);
+        albums.showSongs(albumKey, this.globalAlbums[albumKey].songs);
     },
 
-    showEditMode: function(){
+    showEditMode: function(albumKey){
         var editorContain = $(".editorContain");
         var editButtons = $("<i class='editButton fa fa-pencil-square-o' onclick='albums.enableEditMode()' title='edit Album'></i>"
-                                + "<i class='saveButton fa fa-archive ' onclick='albums.clickSaveButton()' title='Saving changed files'></i>"
+                                + "<i class='saveButton fa fa-archive ' onclick='albums.clickSaveButton("+albumKey+")' title='Saving changed files'></i>"
                                 + "<div class='newButton'></div>");
         editorContain.append(editButtons);
+        console.log("albumKey: " + albumKey);
     },
 
     clearEditMode: function(){
@@ -142,20 +133,21 @@ var albums= {
     },
 
     addNewAlbum: function(){
+        var editorContain = $(".editorContain");
+
     },
 
-    showSongs: function(songList){
+    showSongs: function(albumKey, songs){
         albums.clearSongs();
         var songDescription = $("<i class='songDescription'><strong>Song</strong>");
         var shownSongs = $("#songList");
         shownSongs.append(songDescription);
-        $.each(songList, function(key, value){
-            shownSongs.append("<input id='"+value.id+"' class='songPart edit' name='albumSongs' value='"+value.title+"' type='text' disabled='disabled'>");
+        console.log(this.globalAlbums);
+        $.each(songs, function(key, song){
+            shownSongs.append("<input id='song"+song.id+"' class='songPart edit' DATA-albumKey = '"+albumKey+"'DATA-songKey = '"+key+"' name='albumSongs' value='"+song.title+"' type='text' disabled='disabled'>")
+                .change(albums.globalAlbums[albumKey].songs[key].title = $("#song"+song.id).value);
+            console.log(albums.globalAlbums[albumKey].songs[key].title);
         })
-
-        $(".songPart" ).mouseover(function() {
-            $( ".songPart" ).append("<i class='fa fa-youtube-play'></i>" );
-        });
     },
 
 
@@ -164,14 +156,23 @@ var albums= {
         $("#songList").empty();
     },
 
-    clickSaveButton: function(){
+    addAlbum: function(){
+
+    },
+
+    clickSaveButton: function(albumKey){
         albums.disableEditMode();
-        var albumTitle = document.getElementsByName("albumTitle");
-        var albumId = $(albumTitle).attr("id");
-        this.globalAlbums[albumId].title = albumTitle;
-        this.globalAlbums[albumId].artists = document.getElementsByName("albumArtists");
-        this.globalAlbums[albumId].songs = document.getElementsByName("albumSongs");
-        albums.sendAlbumDAOController(albumId);
+        var album = this.globalAlbums[albumKey];
+        this.globalAlbums[albumKey].title = document.getElementsByName("albumTitle").value;
+        var songs = $(".songPart");
+        $.each(songs, function(song){
+            song = songs.value;
+        })
+        console.log("object songs: " + songs);
+        var album = this.globalAlbums[albumKey];
+        console.log("Save albumKey: " + albumKey);
+        console.log("albumTitle: " + album.title);
+        albums.sendAlbumDAOController(album);
     },
 
     disableEditMode: function(){
@@ -185,18 +186,17 @@ var albums= {
     },
 
 
-    sendAlbumDAOController: function(albumId){
-        var editedAlbum = JSON.stringify(this.globalAlbums[albumId]);
+    sendAlbumDAOController: function(album){
         $.ajax({
             url: "AlbumDAOController",
             dataType: 'json',
             data: {
-                jsonAlbum: editedAlbum
+                jsonAlbum: album
             },
             type: 'POST',
             error: function () {
 
-                //alert("Error Occured");
+                alert("Error Occured");
             },
             success: function () {
             }

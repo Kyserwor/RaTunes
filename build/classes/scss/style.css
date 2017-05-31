@@ -53,7 +53,7 @@ a {
 
 .-cx-PRIVATE-Shell__nav {
 	background-image: linear-gradient( #333333 100%, transparent 50%);
-	height: 7%;
+	height: 60px;
 	border-bottom-width: 1px;
 	-webkit-box-ordinal-group: 2;
 	-webkit-order: 1;
@@ -156,11 +156,7 @@ a {
 	margin: 5px;
 	color: #fffeff;
 	width: 100%;
-	border: solid 2px;
-	border-left-color:#73AD21;
-	border-right-color: #73AD21;
-	border-bottom-color: transparent;
-	border-top-color: transparent;
+	border: 1px solid #73ad21;
 	background-color: #333333;
 }
 
@@ -381,4 +377,33 @@ a {
 #loadToken:hover{
 	color: #333333;
 	background-color: #f0f0f1;
+}
+
+#addAlbum{
+	padding: 7px;
+	text-align: center;
+	color: #333333 !important;
+	border: 1px solid #73ad21 !important;
+	background-color: #73AD21;
+	height: 50px;
+	margin: 5px;
+	color: #fffeff;
+	width: 100%;
+	cursor: pointer;
+}
+
+#addAlbum:hover{
+	color: white !important;
+	border: 1px solid white !important;
+}
+
+#closeContainScreen{
+	color: #5b666b;
+	margin-right: 5%;
+	float: right;
+	cursor: pointer;
+}
+
+#closeContainScreen:hover{
+	color: #961300;
 }

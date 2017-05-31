@@ -1,6 +1,7 @@
 package de.ratunes.auth;
 
 import dao.UserDAO;
+import mvc.main.Main;
 import mvc.model.User;
 
 import javax.servlet.ServletException;
@@ -40,6 +41,9 @@ public class RegistrationController extends HttpServlet {
 		}
 		System.out.println("new user has been added in DB.");
 		getServletConfig().getServletContext().getRequestDispatcher("/view/RaTunesRegistration.jsp").forward(request,response);
+
 	}
+
+
 
 }
